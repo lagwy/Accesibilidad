@@ -16,6 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ListaDiscapacidades"
+            android:label="@string/title_activity_lista_discapacidades" >
+        </activity>
+        <activity
+            android:name=".Ruta"
+            android:label="@string/title_activity_ruta" >
+        </activity>
+        <activity
+            android:name=".ListaEdificios"
+            android:label="@string/title_activity_lista_edificios" >
+        </activity>
     </application>
 
 </manifest>
