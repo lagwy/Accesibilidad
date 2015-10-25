@@ -28,6 +28,14 @@
             android:name=".ListaEdificios"
             android:label="@string/title_activity_lista_edificios" >
         </activity>
+        <activity
+            android:name=".VistaEdificio"
+            android:label="@string/title_activity_vista_edificio" >
+        </activity>
+        <activity
+            android:name=".MapaCampus"
+            android:label="@string/title_activity_mapa_campus" >
+        </activity>
     </application>
 
 </manifest>
