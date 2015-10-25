@@ -8,7 +8,7 @@ import android.view.MenuItem;
 
 public class MainActivity extends ActionBarActivity {
 
-    //Hola
+    //Hola mundo
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
