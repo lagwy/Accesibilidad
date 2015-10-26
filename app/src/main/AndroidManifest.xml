@@ -6,50 +6,65 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
 
-
-        >
+    >
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            >
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
 
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
         <activity
             android:name=".ListaDiscapacidades"
             android:label="@string/title_activity_lista_discapacidades"
+            android:theme="@style/AppTheme"
+
             >
         </activity>
 
         <activity
             android:name=".Ruta"
             android:label="@string/title_activity_ruta"
+            android:theme="@style/AppTheme"
+
             >
+
         </activity>
 
         <activity
             android:name=".ListaEdificios"
             android:label="@string/title_activity_lista_edificios"
+            android:theme="@style/AppTheme2"
+
+
             >
+
         </activity>
 
         <activity
             android:name=".VistaEdificio"
             android:label="@string/title_activity_vista_edificio"
+            android:theme="@style/AppTheme2"
+
             >
+
         </activity>
 
         <activity
             android:name=".MapaCampus"
             android:label="@string/title_activity_mapa_campus"
+            android:theme="@style/AppTheme3"
+
             >
+
         </activity>
 
     </application>

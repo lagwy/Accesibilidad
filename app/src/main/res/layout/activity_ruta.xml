@@ -69,7 +69,8 @@
         android:layout_height="30dp"
         android:id="@+id/buttonTraza"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/traza" />
+        android:background="@drawable/traza"
+        android:layout_marginTop="15dp"/>
 
 
 </LinearLayout>

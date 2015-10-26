@@ -5,10 +5,28 @@
         name="AppTheme"
         parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">#FF15AFFF</item>
-
-        <!-- Customize your theme here. -->
     </style>
 
+    <style
+        name="AppTheme2"
+        parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#fb4b4c</item>
+    </style>
 
+    <style
+        name="AppTheme3"
+        parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#FFFEDE65</item>
+    </style>
+
+    <style
+        name="Theme.AppCompat.Light.NoActionBar.FullScreen"
+        parent="Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+    </style>
 
 </resources>
