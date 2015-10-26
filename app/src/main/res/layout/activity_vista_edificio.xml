@@ -53,7 +53,7 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:id="@+id/imageView3"
-        android:background="@drawable/mapRectoriapng"
+        android:background="@drawable/maprectoria"
         android:layout_alignTop="@+id/linearLayout"
         android:layout_alignEnd="@+id/ediImg"
         android:layout_marginTop="36dp" />
