@@ -3,15 +3,15 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_lista_discapacidades">ListaDiscapacidades</string>
+    <string name="title_activity_lista_discapacidades">Discapacidad</string>
     <string name="estado">Escoja su estado actual:</string>
     <string name="origen">Origen:</string>
     <string name="destino">Destino:</string>
     <string name="esp">Especificaciones:</string>
 
     <string name="title_activity_ruta">Ruta</string>
-    <string name="title_activity_lista_edificios">ListaEdificios</string>
-    <string name="title_activity_vista_edificio">VistaEdificio</string>
-    <string name="title_activity_mapa_campus">MapaCampus</string>
+    <string name="title_activity_lista_edificios">Edificios</string>
+    <string name="title_activity_vista_edificio">Rectoria</string>
+    <string name="title_activity_mapa_campus">Mapa</string>
 
 </resources>

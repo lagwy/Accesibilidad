@@ -1,17 +1,26 @@
 package itesm.mx.accesibilidad;
 
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import android.app.ActionBar;
 
 public class VistaEdificio extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setTitle(R.string.title_activity_vista_edificio);
         setContentView(R.layout.activity_vista_edificio);
+
     }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -19,6 +28,8 @@ public class VistaEdificio extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_vista_edificio, menu);
         return true;
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

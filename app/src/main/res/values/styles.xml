@@ -2,7 +2,28 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">#FF15AFFF</item>
+
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">#fb4b4c</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme3" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">#FFFEDE65</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+
+
+
+
 
 </resources>
