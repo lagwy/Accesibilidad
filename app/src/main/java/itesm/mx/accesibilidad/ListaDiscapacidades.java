@@ -1,10 +1,14 @@
 package itesm.mx.accesibilidad;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class ListaDiscapacidades extends AppCompatActivity {
 
@@ -12,7 +16,31 @@ public class ListaDiscapacidades extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_discapacidades);
+
+        Button backButton = (Button) findViewById(R.id.back1);
+
+
+
+            // 4 al
+        final Button boton4 = (Button) findViewById(R.id.sillaBttn);
+        final Button boton5 = (Button) findViewById(R.id.muletaBttn);
+        final Button boton6 = (Button) findViewById(R.id.bastonBttn);
+        final Button boton7 = (Button) findViewById(R.id.embaraBttn);
+
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ListaDiscapacidades.this, Ruta.class);
+                startActivity(intent);
+            }
+        };
+
+        boton4.setOnClickListener(listener);
+        boton5.setOnClickListener(listener);
+        boton6.setOnClickListener(listener);
+        boton7.setOnClickListener(listener);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

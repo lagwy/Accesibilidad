@@ -31,7 +31,7 @@
         android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:id="@+id/button"
+        android:id="@+id/rutaBttn"
         android:background="@drawable/button1"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true" />
@@ -39,26 +39,26 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:id="@+id/button2"
-        android:layout_below="@+id/button"
-        android:layout_alignStart="@+id/button"
+        android:id="@+id/ediBttn"
+        android:layout_below="@+id/rutaBttn"
+        android:layout_alignStart="@+id/rutaBttn"
         android:background="@drawable/button2" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:id="@+id/button3"
-        android:layout_below="@+id/button2"
-        android:layout_alignStart="@+id/button2"
+        android:id="@+id/mapaBttn"
+        android:layout_below="@+id/ediBttn"
+        android:layout_alignStart="@+id/ediBttn"
         android:background="@drawable/button3" />
 
     <Button
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:id="@+id/button8"
+        android:id="@+id/infoBttn"
         android:background="@drawable/info"
         android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/button" />
+        android:layout_alignEnd="@+id/rutaBttn" />
 
 
 

@@ -1,9 +1,12 @@
 package itesm.mx.accesibilidad;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class ListaEdificios extends AppCompatActivity {
 //dfgvdfg
@@ -11,6 +14,24 @@ public class ListaEdificios extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_edificios);
+
+        Button boton9 = (Button) findViewById(R.id.button9);
+        Button boton10 = (Button ) findViewById(R.id.button10);
+        Button boton11 = (Button) findViewById(R.id.button11);
+        Button boton12 = (Button) findViewById(R.id.button12);
+
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ListaEdificios.this, VistaEdificio.class);
+                startActivity(intent);
+            }
+        };
+
+        boton9.setOnClickListener(listener);
+        boton10.setOnClickListener(listener);
+        boton11.setOnClickListener(listener);
+        boton12.setOnClickListener(listener);
     }
 
     @Override

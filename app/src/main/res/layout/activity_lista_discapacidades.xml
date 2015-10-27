@@ -63,7 +63,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:id="@+id/button4"
+        android:id="@+id/sillaBttn"
         android:background="@drawable/silla"
         android:layout_alignBottom="@+id/textView2"
         android:layout_alignParentStart="true" />
@@ -71,27 +71,27 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:id="@+id/button5"
+        android:id="@+id/muletaBttn"
         android:background="@drawable/muletas"
-        android:layout_below="@+id/button4"
+        android:layout_below="@+id/sillaBttn"
         android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:id="@+id/button6"
+        android:id="@+id/bastonBttn"
         android:background="@drawable/baston"
-        android:layout_below="@+id/button5"
-        android:layout_alignEnd="@+id/button5"
-        android:layout_alignStart="@+id/button5"
+        android:layout_below="@+id/muletaBttn"
+        android:layout_alignEnd="@+id/muletaBttn"
+        android:layout_alignStart="@+id/muletaBttn"
        />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:id="@+id/button7"
+        android:id="@+id/embaraBttn"
         android:background="@drawable/embarazada"
-        android:layout_below="@+id/button6"
+        android:layout_below="@+id/bastonBttn"
         android:layout_alignParentEnd="true" />
 
     <TextView
