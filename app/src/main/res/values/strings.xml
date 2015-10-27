@@ -8,6 +8,15 @@
     <string name="origen">Origen:</string>
     <string name="destino">Destino:</string>
     <string name="esp">Especificaciones:</string>
+    <string name="edificios">Edificios</string>
+    <string name="discapacidad">Discapacidad</string>
+    <string name="mapa">Mapa</string>
+    <string name="ruta">Ruta</string>
+
+
+
+
+
 
     <string name="title_activity_ruta">Ruta</string>
     <string name="title_activity_lista_edificios">Edificios</string>

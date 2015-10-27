@@ -2,6 +2,7 @@ package itesm.mx.accesibilidad;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -34,4 +35,21 @@ public class ListaDiscapacidades extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+  /*  @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_nuevo:
+                Log.i("ActionBar", "Nuevo!");
+                return true;
+            case R.id.action_buscar:
+                Log.i("ActionBar", "Buscar!");;
+                return true;
+            case R.id.action_settings:
+                Log.i("ActionBar", "Settings!");;
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }*/
 }

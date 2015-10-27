@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toolbar;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -18,7 +19,9 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
 
+    }
 
+    private void setSupportActionBar(Toolbar toolbar) {
     }
 
 
