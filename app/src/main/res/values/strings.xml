@@ -5,7 +5,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_lista_discapacidades">Discapacidad</string>
     <string name="estado">Escoja su estado actual:</string>
-    <string name="title_activity_lista_edificios">Edificios</string>
     <string name="edificio">Escoja un edificio:</string>
     <string name="origen">Origen:</string>
     <string name="destino">Destino:</string>
