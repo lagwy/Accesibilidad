@@ -40,7 +40,7 @@ public class ListaDiscapacidades extends AppCompatActivity {
         boton6.setOnClickListener(listener);
         boton7.setOnClickListener(listener);
     }
-//Hola
+//Holaa
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
