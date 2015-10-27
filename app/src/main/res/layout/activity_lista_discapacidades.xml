@@ -8,7 +8,7 @@
     android:id="@+id/s">
 
     <TextView
-        android:text="@string/estado"
+        android:text="@string/edificio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView"

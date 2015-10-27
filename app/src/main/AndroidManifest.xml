@@ -31,6 +31,14 @@
         </activity>
 
         <activity
+            android:name=".ListaEdificios"
+            android:label="@string/title_activity_lista_edificios"
+            android:theme="@style/AppTheme"
+
+            >
+        </activity>
+
+        <activity
             android:name=".Ruta"
             android:label="@string/title_activity_ruta"
             android:theme="@style/AppTheme"
