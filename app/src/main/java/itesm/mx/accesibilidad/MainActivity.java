@@ -22,32 +22,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        final Button boton1 = (Button) findViewById(R.id.rutaBttn);
-        final Button boton2 = (Button) findViewById(R.id.ediBttn);
-        final Button boton3 = (Button) findViewById(R.id.mapaBttn);
+        final Button rutaBttn = (Button) findViewById(R.id.rutaBttn);
+        final Button edificioBttn = (Button) findViewById(R.id.ediBttn);
+        final Button mapaBttn = (Button) findViewById(R.id.mapaBttn);
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent;
-                if (boton1.isPressed()){
+                if (rutaBttn.isPressed()){
                     intent = new Intent(MainActivity.this, ListaDiscapacidades.class);
                     startActivity(intent);
                 }
-                if (boton2.isPressed()){
+                if (edificioBttn.isPressed()){
                     intent = new Intent(MainActivity.this, ListaEdificios.class);
                     startActivity(intent);
                 }
-                if (boton3.isPressed()){
+                if (mapaBttn.isPressed()){
                     intent = new Intent(MainActivity.this, MapaCampus.class);
                     startActivity(intent);
                 }
             }
         };
 
-        boton1.setOnClickListener(listener);
-        boton2.setOnClickListener(listener);
-        boton3.setOnClickListener(listener);
+        rutaBttn.setOnClickListener(listener);
+        edificioBttn.setOnClickListener(listener);
+        mapaBttn.setOnClickListener(listener);
 
     }
 

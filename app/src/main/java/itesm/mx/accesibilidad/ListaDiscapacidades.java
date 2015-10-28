@@ -1,5 +1,6 @@
 package itesm.mx.accesibilidad;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,23 +23,33 @@ public class ListaDiscapacidades extends AppCompatActivity {
 
 
             // 4 al
-        final Button boton4 = (Button) findViewById(R.id.sillaBttn);
-        final Button boton5 = (Button) findViewById(R.id.muletaBttn);
-        final Button boton6 = (Button) findViewById(R.id.bastonBttn);
-        final Button boton7 = (Button) findViewById(R.id.embaraBttn);
+        final Button sillaBttn = (Button) findViewById(R.id.sillaBttn);
+        final Button muletaBttn = (Button) findViewById(R.id.muletaBttn);
+        final Button bastonBttn = (Button) findViewById(R.id.bastonBttn);
+        final Button embaraBttn = (Button) findViewById(R.id.embaraBttn);
+        final Button backBttn = (Button) findViewById(R.id.back1);
+
 
         View.OnClickListener listener = new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ListaDiscapacidades.this, Ruta.class);
-                startActivity(intent);
+                if (backBttn.isPressed()){
+                    finish();
+
+                } else {
+                    Intent intent = new Intent(ListaDiscapacidades.this, Ruta.class);
+                    startActivity(intent);
+                }
             }
         };
 
-        boton4.setOnClickListener(listener);
-        boton5.setOnClickListener(listener);
-        boton6.setOnClickListener(listener);
-        boton7.setOnClickListener(listener);
+        sillaBttn.setOnClickListener(listener);
+        muletaBttn.setOnClickListener(listener);
+        bastonBttn.setOnClickListener(listener);
+        embaraBttn.setOnClickListener(listener);
+        backBttn.setOnClickListener(listener);
+
     }
 //Holaa
 

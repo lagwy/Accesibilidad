@@ -19,12 +19,19 @@ public class ListaEdificios extends AppCompatActivity {
         Button boton10 = (Button ) findViewById(R.id.button10);
         Button boton11 = (Button) findViewById(R.id.button11);
         Button boton12 = (Button) findViewById(R.id.button12);
+        final Button backBttn = (Button) findViewById(R.id.back3);
+
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ListaEdificios.this, VistaEdificio.class);
-                startActivity(intent);
+                if (backBttn.isPressed()){
+                    finish();
+
+                } else {
+                    Intent intent = new Intent(ListaEdificios.this, VistaEdificio.class);
+                    startActivity(intent);
+                }
             }
         };
 
@@ -32,6 +39,8 @@ public class ListaEdificios extends AppCompatActivity {
         boton10.setOnClickListener(listener);
         boton11.setOnClickListener(listener);
         boton12.setOnClickListener(listener);
+        backBttn.setOnClickListener(listener);
+
     }
 
     @Override

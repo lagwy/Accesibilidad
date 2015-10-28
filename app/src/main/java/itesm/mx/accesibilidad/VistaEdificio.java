@@ -7,15 +7,28 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import android.app.ActionBar;
+import android.view.View;
+import android.widget.Button;
 
 public class VistaEdificio extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setTitle(R.string.title_activity_vista_edificio);
         setContentView(R.layout.activity_vista_edificio);
+        //setTitle(R.string.title_activity_vista_edificio);
+
+
+        final Button backBttn = (Button) findViewById(R.id.back4);
+
+
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        };
+        backBttn.setOnClickListener(listener);
 
     }
 
