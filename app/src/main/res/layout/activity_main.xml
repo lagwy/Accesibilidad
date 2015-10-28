@@ -34,7 +34,7 @@
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
-        android:background="@drawable/azul" />
+        android:background="@drawable/button1" />
 
     <Button
         android:id="@+id/ediBttn"
@@ -42,7 +42,7 @@
         android:layout_height="70dp"
         android:layout_alignStart="@+id/rutaBttn"
         android:layout_below="@+id/rutaBttn"
-        android:background="@drawable/rojo" />
+        android:background="@drawable/button2" />
 
     <Button
         android:id="@+id/mapaBttn"
@@ -50,7 +50,7 @@
         android:layout_height="70dp"
         android:layout_alignStart="@+id/ediBttn"
         android:layout_below="@+id/ediBttn"
-        android:background="@drawable/ama" />
+        android:background="@drawable/button3" />
 
     <Button
         android:id="@+id/infoBttn"
