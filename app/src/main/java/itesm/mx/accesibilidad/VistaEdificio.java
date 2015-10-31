@@ -1,6 +1,10 @@
 package itesm.mx.accesibilidad;
 
+import android.app.ProgressDialog;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.ColorDrawable;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,8 +13,16 @@ import android.view.MenuItem;
 import android.app.ActionBar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import java.io.InputStream;
+import java.net.URL;
 
 public class VistaEdificio extends AppCompatActivity {
+    Bitmap bitmap;
+    ImageView mapa;
+    ProgressDialog pDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +32,8 @@ public class VistaEdificio extends AppCompatActivity {
 
 
         final Button backBttn = (Button) findViewById(R.id.back4);
+        mapa = (ImageView) findViewById(R.id.imageView3);
+        new LoadImage().execute("http://g-forward.com/wp-content/uploads/2012/03/approved2.png");
 
 
         View.OnClickListener listener = new View.OnClickListener() {
@@ -32,8 +46,36 @@ public class VistaEdificio extends AppCompatActivity {
 
     }
 
+    // Clase de carga de imagen desde internet
+    private class LoadImage extends AsyncTask<String, String, Bitmap> {
+        @Override
+        protected void onPreExecute(){
+            super.onPreExecute();
+            pDialog = new ProgressDialog(VistaEdificio.this);
+            pDialog.setMessage("Cargando imagen...");
+            pDialog.show();
+        }
 
+        protected Bitmap doInBackground(String... args){
+            try{
+                bitmap = BitmapFactory.decodeStream((InputStream)new URL(args[0]).getContent());
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+            return bitmap;
+        }
 
+        protected void onPostExecute(Bitmap image){
+            if (image != null){
+                mapa.setImageBitmap(image);
+                pDialog.dismiss();
+            } else {
+                pDialog.dismiss();
+                Toast.makeText(getApplicationContext(), "La imagen no existe o error de red", Toast.LENGTH_SHORT).show();
+            }
+        }
+
+    } // Termina clase de carga de imagen
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
