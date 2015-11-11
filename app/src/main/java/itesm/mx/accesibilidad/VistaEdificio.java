@@ -1,6 +1,7 @@
 package itesm.mx.accesibilidad;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.ColorDrawable;
@@ -14,6 +15,7 @@ import android.app.ActionBar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.InputStream;
@@ -24,12 +26,12 @@ public class VistaEdificio extends AppCompatActivity {
     ImageView mapa;
     ProgressDialog pDialog;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vista_edificio);
         //setTitle(R.string.title_activity_vista_edificio);
-
 
         final Button backBttn = (Button) findViewById(R.id.back4);
         mapa = (ImageView) findViewById(R.id.imageView3);

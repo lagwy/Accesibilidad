@@ -15,12 +15,11 @@ public class ListaEdificios extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_edificios);
 
-        Button boton9 = (Button) findViewById(R.id.button9);
-        Button boton10 = (Button ) findViewById(R.id.button10);
-        Button boton11 = (Button) findViewById(R.id.button11);
-        Button boton12 = (Button) findViewById(R.id.button12);
+        final Button boton9 = (Button) findViewById(R.id.button9);
+        final Button boton10 = (Button ) findViewById(R.id.button10);
+        final Button boton11 = (Button) findViewById(R.id.button11);
+        final Button boton12 = (Button) findViewById(R.id.button12);
         final Button backBttn = (Button) findViewById(R.id.back3);
-
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -28,10 +27,9 @@ public class ListaEdificios extends AppCompatActivity {
                 if (backBttn.isPressed()){
                     finish();
 
-                } else {
-                    Intent intent = new Intent(ListaEdificios.this, VistaEdificio.class);
-                    startActivity(intent);
                 }
+                Intent intent = new Intent(ListaEdificios.this, VistaEdificio.class);
+                startActivity(intent);
             }
         };
 
