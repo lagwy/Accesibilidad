@@ -25,6 +25,8 @@ public class VistaEdificio extends AppCompatActivity {
     Bitmap bitmap;
     ImageView mapa;
     ProgressDialog pDialog;
+    String nombreEdificio;
+    TextView nombreEdificioTV;
 
 
     @Override
@@ -33,9 +35,17 @@ public class VistaEdificio extends AppCompatActivity {
         setContentView(R.layout.activity_vista_edificio);
         //setTitle(R.string.title_activity_vista_edificio);
 
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            nombreEdificio = extras.getString("nombreEdificio");
+            nombreEdificioTV = (TextView) findViewById(R.id.nombreEdificio);
+            nombreEdificioTV.setText(nombreEdificio);
+        }
+
         final Button backBttn = (Button) findViewById(R.id.back4);
         mapa = (ImageView) findViewById(R.id.imageView3);
-        new LoadImage().execute("http://g-forward.com/wp-content/uploads/2012/03/approved2.png");
+        new LoadImage().execute("http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas2.jpg");//
+        // new LoadImage().execute("http://g-forward.com/wp-content/uploads/2012/03/approved2.png");
 
 
         View.OnClickListener listener = new View.OnClickListener() {
