@@ -6,20 +6,47 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.GridView;
+import android.widget.Toast;
 
 public class ListaEdificios extends AppCompatActivity {
-//dfgvdfg
+
+    private String[] datos = new String[50];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_edificios);
 
-        final Button boton9 = (Button) findViewById(R.id.button9);
-        final Button boton10 = (Button ) findViewById(R.id.button10);
-        final Button boton11 = (Button) findViewById(R.id.button11);
-        final Button boton12 = (Button) findViewById(R.id.button12);
+
         final Button backBttn = (Button) findViewById(R.id.back3);
+
+//...
+        for(int i=1; i<=50; i++)
+            datos[i-1] = "Dato " + i;
+
+        ArrayAdapter<String> adaptador =
+                new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, datos);
+
+        GridView grdOpciones = (GridView) findViewById(R.id.gridView);
+
+        grdOpciones.setAdapter(adaptador);
+
+
+        grdOpciones.setOnItemClickListener(
+                new AdapterView.OnItemClickListener() {
+                    public void onItemClick(AdapterView<?> parent,
+                                            android.view.View v, int position, long id) {
+                        Toast.makeText(getApplicationContext(), "Opción seleccionada: "
+                                + parent.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
+
+//                        lblMensaje.setText("Opción seleccionada: "
+//                                + parent.getItemAtPosition(position));
+                    }
+                });
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -33,10 +60,6 @@ public class ListaEdificios extends AppCompatActivity {
             }
         };
 
-        boton9.setOnClickListener(listener);
-        boton10.setOnClickListener(listener);
-        boton11.setOnClickListener(listener);
-        boton12.setOnClickListener(listener);
         backBttn.setOnClickListener(listener);
 
     }
