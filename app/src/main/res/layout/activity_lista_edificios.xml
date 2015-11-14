@@ -2,91 +2,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    tools:context=".ListaEdificios"
-    android:clickable="true">
+    tools:context=".ListaEdificios">
 
     <android.support.v7.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/listaEdificiosBar"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="#fb4b4c"
         android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:contentInsetEnd="0dp"
         app:contentInsetStart="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
             android:layout_alignStart="@+id/appbar"
+            android:orientation="horizontal"
             >
             <Button
+                android:id="@+id/back3"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:id="@+id/back3"
                 android:background="@drawable/back"
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true"
-                android:textStyle="bold"
-                android:textSize="25dp"
-                android:textColor="#ffffff"
-                android:layout_marginTop="10dp"
+                android:layout_alignParentTop="true"
                 android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/edificios"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textStyle="bold"
                 />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
 
 
-    <Button
 
+    <!-- <GridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridView"
+        android:layout_gravity="right"
+        android:numColumns="3"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="10dp"
+        android:columnWidth="80px"
+        android:stretchMode="columnWidth"
 
-        android:layout_marginTop="40dp"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:id="@+id/button9"
-        android:background="@drawable/rectoria2"
-        android:layout_below="@+id/button11"
-        android:layout_alignParentStart="true" />
+        /> -->
 
-    <Button
-
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:id="@+id/button10"
-        android:background="@drawable/aulas1"
-        android:layout_alignParentStart="true"
-         />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:id="@+id/button11"
-        android:background="@drawable/ciap"
-        android:layout_below="@+id/button12"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:id="@+id/button12"
-        android:background="@drawable/aulas4"
-        android:layout_below="@+id/button10"
-        android:layout_alignParentStart="true" />
 
 </LinearLayout>
