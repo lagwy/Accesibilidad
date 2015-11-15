@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.InputStream;
@@ -23,12 +24,21 @@ public class Ruta extends AppCompatActivity {
     ProgressDialog pDialog;
     Bitmap bitmap;
     ImageView rutaIV;
-    final static public String URL_BASE = "http://res.cloudinary.com/brogrammers/image/upload/v1447625535/baston/";
+    String titulo, nombre;
+    final static public String URL_BASE = "http://res.cloudinary.com/brogrammers/image/upload/v1447625535/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ruta);
+        TextView tituloRutaTV = (TextView) findViewById(R.id.titulo_rutaTV);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            titulo = tituloRutaTV.getText().toString() + " - " + extras.getString("titulo");
+            nombre = extras.getString("nombre");
+            tituloRutaTV.setText(titulo);
+        }
 
         final Button backBttn = (Button) findViewById(R.id.back2);
         final Button buttonTraza = (Button) findViewById (R.id.buttonTraza);
@@ -95,7 +105,8 @@ public class Ruta extends AppCompatActivity {
                     if(posicionOrigen[0] == posicionDestino[0]){
                         Toast.makeText(Ruta.this, "El origen y el destino son idénticos.", Toast.LENGTH_SHORT).show();
                     } else {
-                        String urlImagen = URL_BASE + nombres[posicionOrigen[0]] + "/" + nombres[posicionDestino[0]] + ".jpg";
+                        String urlImagen = URL_BASE + nombre + "/" + nombres[posicionOrigen[0]] + "/" + nombres[posicionDestino[0]] + ".jpg";
+                        // Toast.makeText(Ruta.this, urlImagen, Toast.LENGTH_SHORT).show();
                         new LoadImage().execute(urlImagen);//
                         //Toast.makeText(Ruta.this, urlImagen, Toast.LENGTH_SHORT).show();
                     }

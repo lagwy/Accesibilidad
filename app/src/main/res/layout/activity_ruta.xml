@@ -44,6 +44,7 @@
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="10dp"
                 android:text="@string/ruta"
+                android:id="@+id/titulo_rutaTV"
                 android:textColor="#ffffff"
                 android:textSize="25dp"
                 android:textStyle="bold"
@@ -106,6 +107,7 @@
         android:layout_height="330dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
         android:background="@drawable/ma"/>
 
     <Button
