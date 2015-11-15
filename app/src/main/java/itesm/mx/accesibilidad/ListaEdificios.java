@@ -141,8 +141,8 @@ public class ListaEdificios extends AppCompatActivity {
         new LoadImage().execute("Aulas 1", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas1.jpg");
         new LoadImage().execute("Aulas 2", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas2.jpg");
         new LoadImage().execute("Aulas 3", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas3.jpg");
-        new LoadImage().execute("Aulas 4", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas4.jpg");
-        new LoadImage().execute("Aulas 6", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas6.jpg");
+        // new LoadImage().execute("Aulas 4", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas4.jpg");
+        // new LoadImage().execute("Aulas 6", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas6.jpg");
         new LoadImage().execute("Aulas 7", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas7.jpg");
         new LoadImage().execute("Auditorio", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/auditorio.jpg");
         new LoadImage().execute("Biotecnologia", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/biotecnologia.jpg");
