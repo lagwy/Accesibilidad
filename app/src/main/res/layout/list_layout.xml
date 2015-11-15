@@ -51,60 +51,34 @@
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
-    <ListView
+
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listaEdificiosLV" />
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp">
 
-    <!--
-    <Button
+        <Button
 
-
-        android:layout_marginTop="40dp"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:id="@+id/button9"
-        android:background="@drawable/rectoria2"
-        android:layout_below="@+id/button11"
-        android:layout_alignParentStart="true" />
-
-    <Button
-
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:id="@+id/button10"
-        android:background="@drawable/aulas1"
-        android:layout_alignParentStart="true"
-         />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:id="@+id/button11"
-        android:background="@drawable/ciap"
-        android:layout_below="@+id/button12"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:id="@+id/button12"
-        android:background="@drawable/aulas4"
-        android:layout_below="@+id/button10"
-        android:layout_alignParentStart="true" />
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:id="@+id/Bttn"
+            android:layout_gravity="right"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/glview"/>
+    </RelativeLayout>
 
 
-     <GridView
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:id="@+id/gridView"
-           android:layout_gravity="right"
-           android:numColumns="3"
-           android:horizontalSpacing="5dp"
-           android:verticalSpacing="10dp"
-           android:columnWidth="80px"
-           android:stretchMode="columnWidth"
-   
-           /> -->
+     <ListView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/listaEdificiosLV" />
+
+
+
+
 </LinearLayout>
 

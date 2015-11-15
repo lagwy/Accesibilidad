@@ -64,7 +64,7 @@
             android:text="@string/origen"
             android:textStyle="bold"
             android:textSize="15dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             />
 
         <Spinner
@@ -89,7 +89,7 @@
             android:text="@string/destino"
             android:textStyle="bold"
             android:textSize="15dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             />
 
         <Spinner
