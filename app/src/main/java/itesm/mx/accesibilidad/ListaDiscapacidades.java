@@ -39,6 +39,25 @@ public class ListaDiscapacidades extends AppCompatActivity {
 
                 } else {
                     Intent intent = new Intent(ListaDiscapacidades.this, Ruta.class);
+                    if (sillaBttn.isPressed()){
+                        intent.putExtra("nombre", "silladeruedas");
+                        intent.putExtra("titulo", "Silla de Ruedas");
+                    }else {
+                        if (muletaBttn.isPressed()){
+                            intent.putExtra("nombre", "usodemuletas");
+                            intent.putExtra("titulo", "Uso de muletas");
+                        } else {
+                            if (bastonBttn.isPressed()){
+                                intent.putExtra("nombre", "baston");
+                                intent.putExtra("titulo", "baston");
+                            } else {
+                                if(embaraBttn.isPressed()){
+                                    intent.putExtra("nombre", "embarazada");
+                                    intent.putExtra("titulo", "Embarazada");
+                                }
+                            }
+                        }
+                    } // Terminan los ifs de los extras
                     startActivity(intent);
                 }
             }

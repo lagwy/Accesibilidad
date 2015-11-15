@@ -52,7 +52,7 @@
     <ImageView
         android:layout_width="350dp"
         android:layout_height="400dp"
-        android:id="@+id/imageView4"
+        android:id="@+id/mapaCampusIV"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:background="@drawable/map2" />
