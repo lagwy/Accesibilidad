@@ -21,28 +21,30 @@
 
     <Button
         android:id="@+id/rutaBttn"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/button1" />
+        android:layout_marginTop="50dp"
+        android:background="@drawable/boton1" />
 
     <Button
         android:id="@+id/ediBttn"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
         android:layout_alignStart="@+id/rutaBttn"
         android:layout_below="@+id/rutaBttn"
-        android:background="@drawable/button2" />
+        android:layout_marginTop="10dp"
+        android:background="@drawable/boton2" />
 
     <Button
         android:id="@+id/mapaBttn"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
         android:layout_alignStart="@+id/ediBttn"
         android:layout_below="@+id/ediBttn"
-        android:background="@drawable/button3" />
+        android:layout_marginTop="10dp"
+        android:background="@drawable/boton3" />
 
     <Button
         android:id="@+id/infoBttn"
