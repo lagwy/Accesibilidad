@@ -14,9 +14,9 @@ import java.util.List;
  * Created by Luis Ángel on 11/11/2015.
  */
 public class ListViewAdapter extends ArrayAdapter<Renglon> {
-    private Context context;
     int layoutResourceId;
     List<Renglon> renglones;
+    private Context context;
 
     public ListViewAdapter(Context context, int idResource, List<Renglon> renglonList){
         super(context, idResource, renglonList);

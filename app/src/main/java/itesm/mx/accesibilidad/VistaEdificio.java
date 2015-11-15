@@ -23,7 +23,7 @@ import java.net.URL;
 
 public class VistaEdificio extends AppCompatActivity {
     Bitmap bitmap;
-    ImageView mapa;
+    ImageView mapa, edificioIV;
     ProgressDialog pDialog;
     String nombreEdificio;
     TextView nombreEdificioTV;
@@ -35,11 +35,21 @@ public class VistaEdificio extends AppCompatActivity {
         setContentView(R.layout.activity_vista_edificio);
         //setTitle(R.string.title_activity_vista_edificio);
 
+
+        edificioIV = (ImageView) findViewById(R.id.ediImg);
+
         Bundle extras = getIntent().getExtras();
         if (extras != null){
             nombreEdificio = extras.getString("nombreEdificio");
             nombreEdificioTV = (TextView) findViewById(R.id.nombreEdificio);
             nombreEdificioTV.setText(nombreEdificio);
+
+            // if(getIntent().hasExtra("byteArray"))
+            byte[] byteArray = getIntent().getByteArrayExtra("imagenEdificio");
+            Bitmap bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+            edificioIV.setImageBitmap(bmp);
+
+
         }
 
         final Button backBttn = (Button) findViewById(R.id.back4);
@@ -56,6 +66,28 @@ public class VistaEdificio extends AppCompatActivity {
         };
         backBttn.setOnClickListener(listener);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_vista_edificio, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     // Clase de carga de imagen desde internet
@@ -88,28 +120,4 @@ public class VistaEdificio extends AppCompatActivity {
         }
 
     } // Termina clase de carga de imagen
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_vista_edificio, menu);
-        return true;
-    }
-
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

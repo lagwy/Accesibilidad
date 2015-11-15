@@ -3,17 +3,19 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/renglonIV"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/renglonIV"
-        android:src="@mipmap/ic_launcher" />
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"
+        />
 
     <TextView
+        android:id="@+id/renglonTV"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:gravity="center"
         android:text="Hola"
         android:textSize="30dp"
-        android:textColor="#000000"
-        android:id="@+id/renglonTV" />
+        android:textStyle="bold" />
 </LinearLayout>

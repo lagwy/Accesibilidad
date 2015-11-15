@@ -15,9 +15,9 @@ import java.util.List;
  */
 public class GridViewAdapter extends ArrayAdapter<Renglon> {
 
-    private Context context;
     int layoutResourceId;
     List<Renglon> renglones;
+    private Context context;
 
     public GridViewAdapter (Context context, int idResource, List<Renglon> renglonList){
         super(context, idResource, renglonList);

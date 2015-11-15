@@ -4,25 +4,25 @@
     >
 
     <ImageView
+        android:id="@+id/imageR"
         android:layout_width="120dp"
         android:layout_height="130dp"
-        android:id="@+id/imageR"
-        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:scaleType="fitXY"
         />
 
     <TextView
+        android:id="@+id/textViewR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textViewR"
-        android:textSize="17dp"
-        android:textStyle="bold"
-        android:textColor="#ffffff"
-        android:layout_marginTop="8dp"
-        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="5dp" />
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:text="New Text"
+        android:textColor="#ffffff"
+        android:textSize="17dp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

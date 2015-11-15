@@ -3,50 +3,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="itesm.mx.accesibilidad.Ruta"
-    android:orientation="vertical">
+    tools:context="itesm.mx.accesibilidad.Ruta">
 
     <android.support.v7.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/rutaBar"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="#FF15AFFF"
         android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:contentInsetEnd="0dp"
         app:contentInsetStart="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
             android:layout_alignStart="@+id/appbar"
+            android:orientation="horizontal"
             >
             <Button
+                android:id="@+id/back2"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:id="@+id/back2"
                 android:background="@drawable/back"
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true"
-                android:textStyle="bold"
-                android:textSize="25dp"
-                android:textColor="#ffffff"
-                android:layout_marginTop="10dp"
+                android:layout_alignParentTop="true"
                 android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/ruta"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textStyle="bold"
                 />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
@@ -54,23 +54,23 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="5dp">
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView"
-            android:text="@string/origen"
-            android:textStyle="bold"
-            android:textSize="15dp"
             android:layout_marginTop="10dp"
+            android:text="@string/origen"
+            android:textSize="15dp"
+            android:textStyle="bold"
             />
 
         <Spinner
+            android:id="@+id/spinnerOri"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:id="@+id/spinnerOri"
             android:layout_alignParentStart="true"
              />
     </LinearLayout>
@@ -78,43 +78,43 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="5dp">
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal">
 
 
     <TextView
+            android:id="@+id/destino"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/destino"
-            android:text="@string/destino"
-            android:textStyle="bold"
-            android:textSize="15dp"
             android:layout_marginTop="10dp"
+            android:text="@string/destino"
+            android:textSize="15dp"
+            android:textStyle="bold"
             />
 
         <Spinner
+            android:id="@+id/spinnerDest"
             android:layout_width="240dp"
             android:layout_height="50dp"
-            android:id="@+id/spinnerDest"
             android:layout_alignParentStart="true"
              />
     </LinearLayout>
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="330dp"
-        android:id="@+id/imageView2"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/ma"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ma"/>
 
     <Button
+        android:id="@+id/buttonTraza"
         android:layout_width="150dp"
         android:layout_height="30dp"
-        android:id="@+id/buttonTraza"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/traza"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp"
+        android:background="@drawable/traza"/>
 
 
 </LinearLayout>

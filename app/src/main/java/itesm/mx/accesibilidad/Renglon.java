@@ -18,19 +18,19 @@ public class Renglon {
         this.imagen = imagen;
     }
 
-    public void setNombre(String nombre){
-        this.nombre = nombre;
-    }
-
-    public void setImagen(Bitmap imagen){
-        this.imagen = imagen;
-    }
-
     public String getNombre(){
         return nombre;
     }
 
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+
     public Bitmap getImagen(){
         return imagen;
+    }
+
+    public void setImagen(Bitmap imagen){
+        this.imagen = imagen;
     }
 }

@@ -4,9 +4,10 @@
     tools:context="itesm.mx.accesibilidad.ListaEdificios"
     >
 
+    <item android:id="@+id/change_view"
+        android:title="change_view" />
 
-    <item
-        android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/exit"
+        android:title="quit" />
+
 </menu>

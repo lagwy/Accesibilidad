@@ -25,6 +25,7 @@ public class Ruta extends AppCompatActivity {
         // SpinnerOri y SpinnerDest
         Spinner spinnerOri = (Spinner) findViewById(R.id.spinnerOri);
         Spinner spinnerDest = (Spinner) findViewById(R.id.spinnerDest);
+
         // String que contiene la lista de edificios
         String[] edificios = new String[]{"Aulas I", "Aulas II", "Aulas III", "Aulas IV", "Aulas VI",
         "Aulas VII", "CETEC", "Centro Estudiantil", "CIAP", "Cedes", "Rectoría", "Centrales"};

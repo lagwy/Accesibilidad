@@ -13,6 +13,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
 
             >
@@ -28,6 +29,8 @@
         <activity
             android:name=".ListaDiscapacidades"
             android:label="@string/title_activity_lista_discapacidades"
+            android:screenOrientation="portrait"
+
 
             >
 
@@ -37,6 +40,8 @@
         <activity
             android:name=".Ruta"
             android:label="@string/title_activity_ruta"
+            android:screenOrientation="portrait"
+
 
             >
 
@@ -46,6 +51,8 @@
         <activity
             android:name=".ListaEdificios"
             android:label="@string/title_activity_lista_edificios"
+            android:screenOrientation="portrait"
+
 
             >
 
@@ -55,6 +62,8 @@
         <activity
             android:name=".VistaEdificio"
             android:label="@string/title_activity_vista_edificio"
+            android:screenOrientation="portrait"
+
 
             >
 
@@ -63,6 +72,7 @@
         <activity
             android:name=".MapaCampus"
             android:label="@string/title_activity_mapa_campus"
+            android:screenOrientation="portrait"
 
             >
 
