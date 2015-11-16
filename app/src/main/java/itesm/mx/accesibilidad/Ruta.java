@@ -21,11 +21,11 @@ import java.io.InputStream;
 import java.net.URL;
 
 public class Ruta extends AppCompatActivity {
+    final static public String URL_BASE = "http://res.cloudinary.com/brogrammers/image/upload/v1447625535/";
     ProgressDialog pDialog;
     Bitmap bitmap;
     ImageView rutaIV;
     String titulo, nombre;
-    final static public String URL_BASE = "http://res.cloudinary.com/brogrammers/image/upload/v1447625535/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,9 @@ public class Ruta extends AppCompatActivity {
 
         final Button backBttn = (Button) findViewById(R.id.back2);
         final Button buttonTraza = (Button) findViewById (R.id.buttonTraza);
+
+
+
         // Las posiciones se guardan en la posicion 0 del arreglo
         final int[] posicionOrigen = new int[1];
         final int[] posicionDestino = new int[1];
@@ -58,6 +61,9 @@ public class Ruta extends AppCompatActivity {
         final String[] nombres = new String[]{"aulas1", "aulas2", "aulas3", "aulas4", "aulas6", "aulas7", "cetec",
         "centroestudiantil", "ciap", "cedes", "rectoria", "centrales"};
         // Implementacion del spinner de origen
+
+
+
         ArrayAdapter<String> adaptadorOrigen = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, edificios);
         adaptadorOrigen.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -117,6 +123,31 @@ public class Ruta extends AppCompatActivity {
         buttonTraza.setOnClickListener(listener);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_ruta, menu);
+
+
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
     // Clase de carga de imagen desde internet
     private class LoadImage extends AsyncTask<String, String, Bitmap> {
         @Override
@@ -147,29 +178,4 @@ public class Ruta extends AppCompatActivity {
         }
 
     } // Termina clase de carga de imagen
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_ruta, menu);
-
-
-
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

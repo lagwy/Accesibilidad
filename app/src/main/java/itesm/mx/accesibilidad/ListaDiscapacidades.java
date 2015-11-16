@@ -41,7 +41,7 @@ public class ListaDiscapacidades extends AppCompatActivity {
                     Intent intent = new Intent(ListaDiscapacidades.this, Ruta.class);
                     if (sillaBttn.isPressed()){
                         intent.putExtra("nombre", "silladeruedas");
-                        intent.putExtra("titulo", "Silla de Ruedas");
+                        intent.putExtra("titulo", "Silla de ruedas");
                     }else {
                         if (muletaBttn.isPressed()){
                             intent.putExtra("nombre", "usodemuletas");
@@ -49,7 +49,7 @@ public class ListaDiscapacidades extends AppCompatActivity {
                         } else {
                             if (bastonBttn.isPressed()){
                                 intent.putExtra("nombre", "baston");
-                                intent.putExtra("titulo", "baston");
+                                intent.putExtra("titulo", "Bastón");
                             } else {
                                 if(embaraBttn.isPressed()){
                                     intent.putExtra("nombre", "embarazada");
