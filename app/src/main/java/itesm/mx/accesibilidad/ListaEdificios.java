@@ -162,11 +162,11 @@ public class ListaEdificios extends AppCompatActivity {
         new LoadImage().execute("Residencias 2", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis2.jpg");
         new LoadImage().execute("Residencias 3", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis3.jpg");
         new LoadImage().execute("Residencias 4", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis4.jpg");
-//        new LoadImage().execute("Residencias 5", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis5.jpg");
-//        new LoadImage().execute("Residencias 6", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis6.jpg");
+        new LoadImage().execute("Residencias 5", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis5.jpg");
+        new LoadImage().execute("Residencias 6", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis6.jpg");
         new LoadImage().execute("Residencias 7", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis7.jpg");
-//        new LoadImage().execute("Residencias 8", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis8.jpg");
-//        new LoadImage().execute("Residencias 9", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis9.jpg");
+        new LoadImage().execute("Residencias 8", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis8.jpg");
+        new LoadImage().execute("Residencias 9", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis9.jpg");
 
 
 
