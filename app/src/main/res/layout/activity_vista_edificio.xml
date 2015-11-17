@@ -24,12 +24,26 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         >
 
+
             <Button
                 android:id="@+id/back4"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/back"
                 />
+        <TextView
+            android:id="@+id/nombreEdificio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="Hola"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
     </android.support.v7.widget.Toolbar>
 
 
@@ -83,19 +97,7 @@
         android:scaleType="fitXY"
         />
 
-    <TextView
-        android:id="@+id/nombreEdificio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
-        android:gravity="center_horizontal"
-        android:text="Hola"
 
-        android:textColor="#ffffff"
-        android:textSize="25dp"
-        android:textStyle="bold" />
 
 
 </RelativeLayout>

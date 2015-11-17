@@ -54,7 +54,7 @@
 
 
 
-    <RelativeLayout
+    za<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
@@ -63,12 +63,12 @@
         <Button
 
             android:id="@+id/Bttn"
-            android:layout_width="90dp"
+            android:layout_width="45dp"
             android:layout_height="50dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
             android:layout_gravity="right"
-            android:background="@drawable/glview"/>
+            android:background="@drawable/gboton"/>
     </RelativeLayout>
 
 

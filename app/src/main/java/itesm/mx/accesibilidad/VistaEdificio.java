@@ -44,10 +44,11 @@ public class VistaEdificio extends AppCompatActivity {
             nombreEdificioTV = (TextView) findViewById(R.id.nombreEdificio);
             nombreEdificioTV.setText(nombreEdificio);
 
-            // if(getIntent().hasExtra("byteArray"))
-            byte[] byteArray = getIntent().getByteArrayExtra("imagenEdificio");
-            Bitmap bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
-            edificioIV.setImageBitmap(bmp);
+            if(getIntent().hasExtra("imagenEdificio")) {
+                byte[] byteArray = getIntent().getByteArrayExtra("imagenEdificio");
+                Bitmap bmp = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+                edificioIV.setImageBitmap(bmp);
+            }
 
 
         }
