@@ -55,7 +55,7 @@ public class VistaEdificio extends AppCompatActivity {
 
         final Button backBttn = (Button) findViewById(R.id.back4);
         mapa = (ImageView) findViewById(R.id.imageView3);
-        new LoadImage().execute("http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas2.jpg");//
+        new LoadImage().execute("http://res.cloudinary.com/brogrammers/image/upload/v1447304278/maps/aulas3.jpg");//
         // new LoadImage().execute("http://g-forward.com/wp-content/uploads/2012/03/approved2.png");
 
 

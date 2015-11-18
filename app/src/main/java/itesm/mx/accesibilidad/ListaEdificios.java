@@ -153,6 +153,7 @@ public class ListaEdificios extends AppCompatActivity {
         new LoadImage().execute("Centrales", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/centrales.jpg");
         new LoadImage().execute("Centro Estudiantil", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/cestudiantil.jpg");
         new LoadImage().execute("CETEC", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/cetec.jpg");
+        new LoadImage().execute("CIAP", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/ciap.jpg");
         new LoadImage().execute("Domo Acuático", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/domo.jpg");
         new LoadImage().execute("E1", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/e1.jpg");
         new LoadImage().execute("Estadio", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/estadio.jpg");
