@@ -18,7 +18,44 @@
     <string name="title_activity_vista_edificio">Rectoria</string>
     <string name="title_activity_mapa_campus">Mapa</string>
 
+    <!--
+    final String[] nombres = new String[]{"aulas1", "aulas2", "aulas3", "aulas4", "aulas6", "aulas7", "cetec",
+        "centroestudiantil", "ciap", "cedes", "rectoria", "centrales"};
+    -->
+    <!-- Array de nombres para el URL -->
+    <string-array name="nombres">
+        <item>aulas1</item>
+        <item>aulas2</item>
+        <item>aulas3</item>
+        <item>aulas4</item>
+        <item>aulas6</item>
+        <item>aulas7</item>
+        <item>cetec</item>
+        <item>centroestudiantil</item>
+        <item>ciap</item>
+        <item>cedes</item>
+        <item>rectoria</item>
+        <item>centrales</item>
+    </string-array>
 
+    <!--
+     final String[] edificios = new String[]{"Aulas I", "Aulas II", "Aulas III", "Aulas IV", "Aulas VI",
+        "Aulas VII", "CETEC", "Centro Estudiantil", "CIAP", "Cedes", "Rectoría", "Centrales"};
+     -->
+    <string-array name="edificios">
+        <item>Aulas I</item>
+        <item>Aulas II</item>
+        <item>Aulas III</item>
+        <item>Aulas IV</item>
+        <item>Aulas VI</item>
+        <item>Aulas VII</item>
+        <item>CETEC</item>
+        <item>Centro Estudiantil</item>
+        <item>CIAP</item>
+        <item>Cedes</item>
+        <item>Rectoría</item>
+        <item>Centrales</item>
+    </string-array>
 
 
 </resources>
