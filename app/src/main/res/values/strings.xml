@@ -17,5 +17,65 @@
     <string name="title_activity_lista_edificios">Edificios</string>
     <string name="title_activity_vista_edificio">Rectoria</string>
     <string name="title_activity_mapa_campus">Mapa</string>
+
+    <!-- Array de nombres para el URL -->
+    <string-array name="nombres">
+        <item>aulas1</item>
+        <item>aulas2</item>
+        <item>aulas3</item>
+        <item>aulas4</item>
+        <item>aulas6</item>
+        <item>aulas7</item>
+        <item>cetec</item>
+        <item>centroestudiantil</item>
+        <item>ciap</item>
+        <item>cedes</item>
+        <item>rectoria</item>
+        <item>centrales</item>
+    </string-array>
+
+    <string-array name="edificios">
+        <item>Aulas I</item>
+        <item>Aulas II</item>
+        <item>Aulas III</item>
+        <item>Aulas IV</item>
+        <item>Aulas VI</item>
+        <item>Aulas VII</item>
+        <item>CETEC</item>
+        <item>Centro Estudiantil</item>
+        <item>CIAP</item>
+        <item>Cedes</item>
+        <item>Rectoría</item>
+        <item>Centrales</item>
+    </string-array>
+
+    <string-array name="vista_edificios">
+        <item>aulas1</item>
+        <item>aulas2</item>
+        <item>aulas3</item>
+        <item>aulas4</item>
+        <item>aulas6</item>
+        <item>aulas7</item>
+        <item>auditorio</item>
+        <item>biotecnologia</item>
+        <item>cedes</item>
+        <item>centrales</item>
+        <item>centroestudiantil</item>
+        <item>cetec</item>
+        <item>domo</item>
+        <item>e1</item>
+        <item>estadio</item>
+        <item>gimnasio</item>
+        <item>rectoria</item>
+        <item>resis1</item>
+        <item>resis2</item>
+        <item>resis3</item>
+        <item>resis4</item>
+        <item>resis5</item>
+        <item>resis6</item>
+        <item>resis7</item>
+        <item>resis8</item>
+        <item>resis9</item>
+    </string-array>
     <string name="title_activity_creditos">Creditos</string>
 </resources>

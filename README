@@ -1,3 +1,13 @@
 Proyecto de la materia de Desarrollo para Dispositivos Móviles
 
 Luis Ángel Martínez García, Jorge Luis Márquez Sánchez, Daniel García Mena
+
+Version 2.0
+Release 2.
+
+To do:
+Actualizar la actividad VistaEdificio para que muestre las descripciones correctas.
+Terminar de subir las imágenes faltantes para las rutas
+Dialogo en el botón de ayuda en MainActivity
+Gesto de double tap en la imagen de MapaCampus
+Permitir únicamente que la aplicación pueda ser utilizada con WiFi

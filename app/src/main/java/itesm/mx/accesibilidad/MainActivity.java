@@ -15,6 +15,14 @@ import android.widget.Toolbar;
 public class MainActivity extends AppCompatActivity {
 
     //Hola mundo
+    /*
+        Todo: Actualizar la actividad VistaEdificio para que muestre las descripciones correctas.
+        Todo: Terminar de subir las imágenes faltantes para las rutas
+        Todo: Dialogo en el botón de ayuda en MainActivity
+        Todo: Gesto de double tap en la imagen de MapaCampus
+        Todo: Permitir únicamente que la aplicación pueda ser utilizada con WiFi
+    */
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

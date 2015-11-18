@@ -30,7 +30,7 @@ import static itesm.mx.accesibilidad.R.menu.*;
 public class ListaEdificios extends AppCompatActivity {
 //dfgvdfg
 
-
+    int van;
     ProgressDialog pDialog;
     List<Renglon> listaRenglones = new ArrayList<Renglon>();
     Bitmap bitmap;
@@ -46,22 +46,18 @@ public class ListaEdificios extends AppCompatActivity {
     ViewStub listview, gridview, gb, lb, bb;
     private boolean listVisible = true;
     private ContextMenu menu;
+    String[] vistaEdificios;
 
-
-
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_edificios);
 
-
-
+        van = 0;
         //set of layouts for the views
         listview = (ViewStub) findViewById(R.id.list);
         gridview = (ViewStub) findViewById(R.id.grid);
 
-
+        vistaEdificios = getResources().getStringArray(R.array.vista_edificios);
         //inflate the layouts
         listview.inflate();
         gridview.inflate();
@@ -125,11 +121,13 @@ public class ListaEdificios extends AppCompatActivity {
                     renglon.getImagen().compress(Bitmap.CompressFormat.JPEG, 100, stream);
                     byte[] byteArray = stream.toByteArray();
                     intent.putExtra("imagenEdificio", byteArray);
+                    intent.putExtra("urls", vistaEdificios[position]);
+                    // Aquí hay que añadir lo de la carga de imagen del edificio
                 }
 
                 startActivity(intent);
 
-                Toast.makeText(ListaEdificios.this, renglon.getNombre() , Toast.LENGTH_SHORT).show();
+                // Toast.makeText(ListaEdificios.this, renglon.getNombre() , Toast.LENGTH_SHORT).show();
             }
         };
         listaEdificiosGV.setOnItemClickListener(itemListener);
@@ -140,7 +138,7 @@ public class ListaEdificios extends AppCompatActivity {
     }
 
     public void getInfoRenglones(){
-
+        // 26 edificios
         new LoadImage().execute("Aulas 1", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas1.jpg");
         new LoadImage().execute("Aulas 2", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas2.jpg");
         new LoadImage().execute("Aulas 3", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas3.jpg");
@@ -264,16 +262,16 @@ public class ListaEdificios extends AppCompatActivity {
 
         protected void onPostExecute(Renglon renglon){
             if (renglon != null){
-
                 // renglon = new Renglon("Aulas 1", image);
+                van++;
                 listaRenglones.add(renglon);
                 if(todos){
                     miAdaptador = new ListViewAdapter(getApplication(), R.layout.row, listaRenglones);
-
                     listaEdificiosLV.setAdapter(miAdaptador);
+                }
+                if(van >= 25){
                     pDialog.dismiss();
                 }
-
             } else {
                 pDialog.dismiss();
                 Toast.makeText(getApplicationContext(), "La imagen no existe o error de red", Toast.LENGTH_SHORT).show();

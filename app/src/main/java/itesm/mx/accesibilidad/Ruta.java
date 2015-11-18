@@ -56,10 +56,12 @@ public class Ruta extends AppCompatActivity {
         Spinner spinnerDest = (Spinner) findViewById(R.id.spinnerDest);
 
         // String que contiene la lista de edificios
-        String[] edificios = new String[]{"Aulas I", "Aulas II", "Aulas III", "Aulas IV", "Aulas VI",
-        "Aulas VII", "CETEC", "Centro Estudiantil", "CIAP", "Cedes", "Rectoría", "Centrales"};
-        final String[] nombres = new String[]{"aulas1", "aulas2", "aulas3", "aulas4", "aulas6", "aulas7", "cetec",
-        "centroestudiantil", "ciap", "cedes", "rectoria", "centrales"};
+        //final String[] edificios = new String[]{"Aulas I", "Aulas II", "Aulas III", "Aulas IV", "Aulas VI",
+        //"Aulas VII", "CETEC", "Centro Estudiantil", "CIAP", "Cedes", "Rectoría", "Centrales"};
+        //final String[] nombres = new String[]{"aulas1", "aulas2", "aulas3", "aulas4", "aulas6", "aulas7", "cetec",
+        //"centroestudiantil", "ciap", "cedes", "rectoria", "centrales"};
+        final String[] nombres = getResources().getStringArray(R.array.nombres);
+        final String[] edificios = getResources().getStringArray(R.array.edificios);
         // Implementacion del spinner de origen
 
 
@@ -173,7 +175,7 @@ public class Ruta extends AppCompatActivity {
                 pDialog.dismiss();
             } else {
                 pDialog.dismiss();
-                Toast.makeText(getApplicationContext(), "La imagen no existe o error de red", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Error de red", Toast.LENGTH_SHORT).show();
             }
         }
 
