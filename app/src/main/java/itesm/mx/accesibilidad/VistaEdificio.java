@@ -22,11 +22,14 @@ import java.io.InputStream;
 import java.net.URL;
 
 public class VistaEdificio extends AppCompatActivity {
+    static final String URL_BASE = "http://res.cloudinary.com/brogrammers/image/upload/v1447791133/maps/";
     Bitmap bitmap;
     ImageView mapa, edificioIV;
     ProgressDialog pDialog;
     String nombreEdificio;
     TextView nombreEdificioTV;
+    String parteURL;
+    String enlace;
 
 
     @Override
@@ -41,8 +44,10 @@ public class VistaEdificio extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if (extras != null){
             nombreEdificio = extras.getString("nombreEdificio");
-            nombreEdificioTV = (TextView) findViewById(R.id.nombreEdificio);
+            nombreEdificioTV = (TextView) findViewById(R.id.nombreEdificioVis);
             nombreEdificioTV.setText(nombreEdificio);
+            parteURL = extras.getString("urls");
+            enlace = URL_BASE + parteURL + ".png";
 
             if(getIntent().hasExtra("imagenEdificio")) {
                 byte[] byteArray = getIntent().getByteArrayExtra("imagenEdificio");
@@ -55,7 +60,8 @@ public class VistaEdificio extends AppCompatActivity {
 
         final Button backBttn = (Button) findViewById(R.id.back4);
         mapa = (ImageView) findViewById(R.id.imageView3);
-        new LoadImage().execute("http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas2.jpg");//
+        new LoadImage().execute(enlace);
+        //new LoadImage().execute("http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas2.jpg");//
         // new LoadImage().execute("http://g-forward.com/wp-content/uploads/2012/03/approved2.png");
 
 

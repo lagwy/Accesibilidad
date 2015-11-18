@@ -18,10 +18,6 @@
     <string name="title_activity_vista_edificio">Rectoria</string>
     <string name="title_activity_mapa_campus">Mapa</string>
 
-    <!--
-    final String[] nombres = new String[]{"aulas1", "aulas2", "aulas3", "aulas4", "aulas6", "aulas7", "cetec",
-        "centroestudiantil", "ciap", "cedes", "rectoria", "centrales"};
-    -->
     <!-- Array de nombres para el URL -->
     <string-array name="nombres">
         <item>aulas1</item>
@@ -38,10 +34,6 @@
         <item>centrales</item>
     </string-array>
 
-    <!--
-     final String[] edificios = new String[]{"Aulas I", "Aulas II", "Aulas III", "Aulas IV", "Aulas VI",
-        "Aulas VII", "CETEC", "Centro Estudiantil", "CIAP", "Cedes", "Rectoría", "Centrales"};
-     -->
     <string-array name="edificios">
         <item>Aulas I</item>
         <item>Aulas II</item>
@@ -57,5 +49,32 @@
         <item>Centrales</item>
     </string-array>
 
-
+    <string-array name="vista_edificios">
+        <item>aulas1</item>
+        <item>aulas2</item>
+        <item>aulas3</item>
+        <item>aulas4</item>
+        <item>aulas6</item>
+        <item>aulas7</item>
+        <item>auditorio</item>
+        <item>biotecnologia</item>
+        <item>cedes</item>
+        <item>centrales</item>
+        <item>centroestudiantil</item>
+        <item>cetec</item>
+        <item>domo</item>
+        <item>e1</item>
+        <item>estadio</item>
+        <item>gimnasio</item>
+        <item>rectoria</item>
+        <item>resis1</item>
+        <item>resis2</item>
+        <item>resis3</item>
+        <item>resis4</item>
+        <item>resis5</item>
+        <item>resis6</item>
+        <item>resis7</item>
+        <item>resis8</item>
+        <item>resis9</item>
+    </string-array>
 </resources>
