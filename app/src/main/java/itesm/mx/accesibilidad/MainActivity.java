@@ -18,9 +18,12 @@ public class MainActivity extends AppCompatActivity {
     /*
         Todo: Actualizar la actividad VistaEdificio para que muestre las descripciones correctas.
         Todo: Terminar de subir las imágenes faltantes para las rutas
+        Todo: Terminar de subir las imagenes de los mapas
         Todo: Dialogo en el botón de ayuda en MainActivity
         Todo: Gesto de double tap en la imagen de MapaCampus
         Todo: Permitir únicamente que la aplicación pueda ser utilizada con WiFi
+        Todo: Poner los creditos
+
     */
 
 
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         final Button rutaBttn = (Button) findViewById(R.id.rutaBttn);
         final Button edificioBttn = (Button) findViewById(R.id.ediBttn);
         final Button mapaBttn = (Button) findViewById(R.id.mapaBttn);
+        final Button infoBttn = (Button) findViewById(R.id.infoBttn);
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -50,12 +54,18 @@ public class MainActivity extends AppCompatActivity {
                     intent = new Intent(MainActivity.this, MapaCampus.class);
                     startActivity(intent);
                 }
+                if (infoBttn.isPressed()){
+                    intent = new Intent(MainActivity.this, Creditos.class);
+                    startActivity(intent);
+                }
             }
         };
 
         rutaBttn.setOnClickListener(listener);
         edificioBttn.setOnClickListener(listener);
         mapaBttn.setOnClickListener(listener);
+        infoBttn.setOnClickListener(listener);
+
 
     }
 

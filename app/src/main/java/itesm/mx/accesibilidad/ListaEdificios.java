@@ -44,9 +44,9 @@ public class ListaEdificios extends AppCompatActivity {
     Button backBttn, lBttn, gBttn, backBttn2;
 
     ViewStub listview, gridview, gb, lb, bb;
+    String[] vistaEdificios;
     private boolean listVisible = true;
     private ContextMenu menu;
-    String[] vistaEdificios;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
