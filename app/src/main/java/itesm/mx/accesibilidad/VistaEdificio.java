@@ -41,7 +41,7 @@ public class VistaEdificio extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if (extras != null){
             nombreEdificio = extras.getString("nombreEdificio");
-            nombreEdificioTV = (TextView) findViewById(R.id.nombreEdificio);
+            nombreEdificioTV = (TextView) findViewById(R.id.nombreEdificioVis);
             nombreEdificioTV.setText(nombreEdificio);
 
             if(getIntent().hasExtra("imagenEdificio")) {
