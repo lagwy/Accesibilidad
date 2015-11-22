@@ -24,7 +24,7 @@
         android:layout_below="@+id/imageView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
-        android:text="           Version 2.0 \n\n\n Señor Jorge \n\n Profesora: Martha Sordia \n\n Director de nose que \n\nLuis Angel Martinez\nDaniel Garcia\nJorge Marquez "
+        android:text="           Version 2.0 \n\n\nJorge Ayala \n\n Profesora: Martha Sordia \n\n Director: \n\nLuis Angel Martinez\nDaniel Garcia\nJorge Marquez "
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <Button
