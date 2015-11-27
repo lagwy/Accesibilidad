@@ -139,6 +139,13 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
         return true;
     }
 
+    @Override
+    public boolean onTouchEvent (MotionEvent e){
+        this.myGestureDetector.onTouchEvent(e);
+
+        return  super.onTouchEvent(e);
+    }
+
     // Clase de carga de imagen desde internet
     private class LoadImage extends AsyncTask<String, String, Bitmap> {
         @Override
@@ -179,12 +186,5 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
         }
 
     } // Termina clase de carga de imagen
-
-    @Override
-    public boolean onTouchEvent (MotionEvent e){
-        this.myGestureDetector.onTouchEvent(e);
-
-        return  super.onTouchEvent(e);
-    }
 }
 

@@ -57,12 +57,12 @@ tools:context="itesm.mx.accesibilidad.MapaCampus"
     android:scaleType="fitXY" />
 
 <TextView
+    android:id="@+id/nombreMapaTV"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="New Text"
-    android:id="@+id/nombreMapaTV"
     android:layout_alignParentBottom="true"
-    android:layout_centerHorizontal="true" />
+    android:layout_centerHorizontal="true"
+    android:text="New Text" />
 
 
 </RelativeLayout>
