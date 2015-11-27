@@ -1,59 +1,60 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="itesm.mx.accesibilidad.MapaCampus">
+    tools:context="itesm.mx.accesibilidad.MapaCampus"
+    >
 
     <android.support.v7.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/mapaBar"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="#FFFEDE65"
         android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:contentInsetEnd="0dp"
         app:contentInsetStart="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_alignStart="@+id/appbar"
+
             >
             <Button
+                android:id="@+id/back5"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:id="@+id/back5"
                 android:background="@drawable/back"
                 />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:textStyle="bold"
-                android:textSize="25dp"
-                android:textColor="#ffffff"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="60dp"
-                android:text="@string/mapa"
-                />
-        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="@string/mapa"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold" />
     </android.support.v7.widget.Toolbar>
 
 
     <ImageView
+        android:id="@+id/mapaCampusIV"
         android:layout_width="350dp"
         android:layout_height="400dp"
-        android:id="@+id/imageView4"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:background="@drawable/map2" />
+
+
 </RelativeLayout>

@@ -15,6 +15,17 @@ import android.widget.Toolbar;
 public class MainActivity extends AppCompatActivity {
 
     //Hola mundo
+    /*
+        Todo: Actualizar la actividad VistaEdificio para que muestre las descripciones correctas.
+        Todo: Terminar de subir las imágenes faltantes para las rutas
+        Todo: Terminar de subir las imagenes de los mapas
+        Todo: Dialogo en el botón de ayuda en MainActivity
+        Todo: Gesto de double tap en la imagen de MapaCampus
+        Todo: Permitir únicamente que la aplicación pueda ser utilizada con WiFi
+        Todo: Poner los creditos
+
+    */
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,32 +33,39 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        final Button boton1 = (Button) findViewById(R.id.rutaBttn);
-        final Button boton2 = (Button) findViewById(R.id.ediBttn);
-        final Button boton3 = (Button) findViewById(R.id.mapaBttn);
+        final Button rutaBttn = (Button) findViewById(R.id.rutaBttn);
+        final Button edificioBttn = (Button) findViewById(R.id.ediBttn);
+        final Button mapaBttn = (Button) findViewById(R.id.mapaBttn);
+        final Button infoBttn = (Button) findViewById(R.id.infoBttn);
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent;
-                if (boton1.isPressed()){
+                if (rutaBttn.isPressed()){
                     intent = new Intent(MainActivity.this, ListaDiscapacidades.class);
                     startActivity(intent);
                 }
-                if (boton2.isPressed()){
+                if (edificioBttn.isPressed()){
                     intent = new Intent(MainActivity.this, ListaEdificios.class);
                     startActivity(intent);
                 }
-                if (boton3.isPressed()){
+                if (mapaBttn.isPressed()){
                     intent = new Intent(MainActivity.this, MapaCampus.class);
+                    startActivity(intent);
+                }
+                if (infoBttn.isPressed()){
+                    intent = new Intent(MainActivity.this, Creditos.class);
                     startActivity(intent);
                 }
             }
         };
 
-        boton1.setOnClickListener(listener);
-        boton2.setOnClickListener(listener);
-        boton3.setOnClickListener(listener);
+        rutaBttn.setOnClickListener(listener);
+        edificioBttn.setOnClickListener(listener);
+        mapaBttn.setOnClickListener(listener);
+        infoBttn.setOnClickListener(listener);
+
 
     }
 
