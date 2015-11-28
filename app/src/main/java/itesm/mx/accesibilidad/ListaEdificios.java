@@ -139,33 +139,33 @@ public class ListaEdificios extends AppCompatActivity {
 
     public void getInfoRenglones(){
         // 26 edificios
-        new LoadImage().execute("Aulas 1", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas1.jpg");
-        new LoadImage().execute("Aulas 2", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas2.jpg");
-        new LoadImage().execute("Aulas 3", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas3.jpg");
-        new LoadImage().execute("Aulas 4", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas4.jpg");
-        new LoadImage().execute("Aulas 6", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas6.jpg");
-        new LoadImage().execute("Aulas 7", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas7.jpg");
-        new LoadImage().execute("Auditorio", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/auditorio.jpg");
-        new LoadImage().execute("Biotecnología", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/biotecnologia.jpg");
-        new LoadImage().execute("CEDES", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/cedes.jpg");
-        new LoadImage().execute("Centrales", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/centrales.jpg");
-        new LoadImage().execute("Centro Estudiantil", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/cestudiantil.jpg");
-        new LoadImage().execute("CETEC", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/cetec.jpg");
-        new LoadImage().execute("CIAP", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/ciap.jpg");
-        new LoadImage().execute("Domo Acuático", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/domo.jpg");
-        new LoadImage().execute("E1", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/e1.jpg");
-        new LoadImage().execute("Estadio", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/estadio.jpg");
-        new LoadImage().execute("Gimnasio", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/gimnasio.jpg");
-        new LoadImage().execute("Rectoría", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/rectoria.jpg");
-        new LoadImage().execute("Residencias 1", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis1.jpg");
-        new LoadImage().execute("Residencias 2", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis2.jpg");
-        new LoadImage().execute("Residencias 3", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis3.jpg");
-        new LoadImage().execute("Residencias 4", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis4.jpg");
-        new LoadImage().execute("Residencias 5", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis5.jpg");
-        new LoadImage().execute("Residencias 6", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis6.jpg");
-        new LoadImage().execute("Residencias 7", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis7.jpg");
-        new LoadImage().execute("Residencias 8", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis8.jpg");
-        new LoadImage().execute("Residencias 9", "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis9.jpg");
+        new LoadImage().execute("Aulas 1",              "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas1.jpg");
+        new LoadImage().execute("Aulas 2",              "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas2.jpg");
+        new LoadImage().execute("Aulas 3",              "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas3.jpg");
+        new LoadImage().execute("Aulas 4",              "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas4.jpg");
+        new LoadImage().execute("Aulas 6",              "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas6.jpg");
+        new LoadImage().execute("Aulas 7",              "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas7_nuevo.jpg");
+        new LoadImage().execute("Auditorio",            "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/auditorio.jpg");
+        new LoadImage().execute("Biotecnología",        "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/biotecnologia.jpg");
+        new LoadImage().execute("CEDES",                "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/cedes.jpg");
+        new LoadImage().execute("Centrales",            "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/centrales.jpg");
+        new LoadImage().execute("Centro Estudiantil",   "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/cestudiantil.jpg");
+        new LoadImage().execute("CETEC",                "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/cetec.jpg");
+        new LoadImage().execute("CIAP",                 "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/ciap.jpg");
+        new LoadImage().execute("Domo Acuático",        "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/domo.jpg");
+        new LoadImage().execute("E1",                   "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/e1.jpg");
+        new LoadImage().execute("Estadio",              "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/estadio.jpg");
+        new LoadImage().execute("Gimnasio",             "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/gimnasio.jpg");
+        new LoadImage().execute("Rectoría",             "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/rectoria_nuevo.jpg");
+        new LoadImage().execute("Residencias 1",        "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis1.jpg");
+        new LoadImage().execute("Residencias 2",        "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis2.jpg");
+        new LoadImage().execute("Residencias 3",        "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis3.jpg");
+        new LoadImage().execute("Residencias 4",        "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis4.jpg");
+        new LoadImage().execute("Residencias 5",        "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis5.jpg");
+        new LoadImage().execute("Residencias 6",        "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis6.jpg");
+        new LoadImage().execute("Residencias 7",        "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis7.jpg");
+        new LoadImage().execute("Residencias 8",        "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis8.jpg");
+        new LoadImage().execute("Residencias 9",        "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis9.jpg");
 
 
 

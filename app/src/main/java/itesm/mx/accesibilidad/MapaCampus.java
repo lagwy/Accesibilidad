@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import java.io.InputStream;
 import java.net.URL;
+import java.net.URLEncoder;
 
 public class MapaCampus extends AppCompatActivity implements GestureDetector.OnGestureListener {
     public GestureDetectorCompat myGestureDetector;
@@ -132,7 +133,7 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
         } else if(actual == 1){
             nombreCampusTV.setText("Rampas");
         } else if(actual == 2){
-            nombreCampusTV.setText("BaÃ±os accesibles");
+            nombreCampusTV.setText("Baños accesibles");
         }
 
         mapaIV.setImageBitmap(imagenes[actual]);
