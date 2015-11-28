@@ -19,5 +19,6 @@
         android:gravity="center"
         android:text="Hola"
         android:textSize="20dp"
+        android:textColor="#000"
         android:textStyle="bold" />
 </LinearLayout>
