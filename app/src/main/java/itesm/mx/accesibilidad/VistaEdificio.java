@@ -22,7 +22,9 @@ public class VistaEdificio extends AppCompatActivity {
     ImageView mapa, edificioIV;
     ProgressDialog pDialog;
     String nombreEdificio, sUrl;
+    String []descripciones;
     TextView nombreEdificioTV;
+    int posicion;
 
 
     @Override
@@ -31,14 +33,17 @@ public class VistaEdificio extends AppCompatActivity {
         setContentView(R.layout.activity_vista_edificio);
         //setTitle(R.string.title_activity_vista_edificio);
 
-
+        descripciones = getResources().getStringArray(R.array.descripciones);
         edificioIV = (ImageView) findViewById(R.id.ediImg);
+        TextView descripcion = (TextView) findViewById(R.id.descripcion);
 
         Bundle extras = getIntent().getExtras();
         if (extras != null){
             nombreEdificio = extras.getString("nombreEdificio");
             nombreEdificioTV = (TextView) findViewById(R.id.nombreEdificioVis);
             nombreEdificioTV.setText(nombreEdificio);
+            posicion = extras.getInt("posicion");
+            descripcion.setText(descripciones[posicion]);
 
             if(getIntent().hasExtra("imagenEdificio")) {
                 sUrl = extras.getString("urls");
