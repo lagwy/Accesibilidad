@@ -143,6 +143,7 @@ public class Ruta extends AppCompatActivity {
                     location = locationManager.getLastKnownLocation(locationManager.GPS_PROVIDER);
                     latitud = location.getLatitude();
                     longitud = location.getLongitude();
+                    localPosition();
 
 
 
