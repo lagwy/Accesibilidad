@@ -121,6 +121,7 @@ public class ListaEdificios extends AppCompatActivity {
                     renglon.getImagen().compress(Bitmap.CompressFormat.JPEG, 100, stream);
                     byte[] byteArray = stream.toByteArray();
                     intent.putExtra("imagenEdificio", byteArray);
+                    intent.putExtra("posicion", position);
                     intent.putExtra("urls", vistaEdificios[position]);
                     // Aquí hay que añadir lo de la carga de imagen del edificio
                 }
@@ -143,7 +144,8 @@ public class ListaEdificios extends AppCompatActivity {
         new LoadImage().execute("Aulas 2",              "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas2.jpg");
         new LoadImage().execute("Aulas 3",              "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas3.jpg");
         new LoadImage().execute("Aulas 4",              "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas4.jpg");
-        new LoadImage().execute("Aulas 6",              "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas6.jpg");
+        new LoadImage().execute("Aulas 6", "http://res.cloudinary.com/brogrammers/image/upload/c_scale,q_52,w_502/v1447629345/edificios/aulas6.jpg");
+        //new LoadImage().execute("Aulas 6",              "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas6.jpg");
         new LoadImage().execute("Aulas 7",              "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas7_nuevo.jpg");
         new LoadImage().execute("Auditorio",            "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/auditorio.jpg");
         new LoadImage().execute("Biotecnología",        "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/biotecnologia.jpg");
