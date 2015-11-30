@@ -26,27 +26,43 @@
         <item>aulas4</item>
         <item>aulas6</item>
         <item>aulas7</item>
-        <item>cetec</item>
-        <item>centroestudiantil</item>
-        <item>ciap</item>
-        <item>cedes</item>
-        <item>rectoria</item>
+        <item>biotecnologia</item>
         <item>centrales</item>
+        <item>centroestudiantil</item>
+        <item>cetec</item>
+        <item>ciap</item>
+        <item>rectoria</item>
     </string-array>
 
-    <string-array name="edificios">
+    <string-array name="edificiosOrigen">
         <item>Aulas I</item>
         <item>Aulas II</item>
         <item>Aulas III</item>
         <item>Aulas IV</item>
         <item>Aulas VI</item>
         <item>Aulas VII</item>
-        <item>CETEC</item>
-        <item>Centro Estudiantil</item>
-        <item>CIAP</item>
-        <item>Cedes</item>
-        <item>Rectoría</item>
+        <item>Biotecnología</item>
         <item>Centrales</item>
+        <item>Centro Estudiantil</item>
+        <item>CETEC</item>
+        <item>CIAP</item>
+        <item>Rectoría</item>
+        <item>Ubiación actual</item>
+    </string-array>
+
+    <string-array name="edificiosDestino">
+        <item>Aulas I</item>
+        <item>Aulas II</item>
+        <item>Aulas III</item>
+        <item>Aulas IV</item>
+        <item>Aulas VI</item>
+        <item>Aulas VII</item>
+        <item>Biotecnología</item>
+        <item>Centrales</item>
+        <item>Centro Estudiantil</item>
+        <item>CETEC</item>
+        <item>CIAP</item>
+        <item>Rectoría</item>
     </string-array>
 
     <string-array name="vista_edificios">
