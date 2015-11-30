@@ -5,12 +5,15 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission  android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
+        
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -25,30 +28,38 @@
         <activity
             android:name=".ListaDiscapacidades"
             android:label="@string/title_activity_lista_discapacidades"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
         </activity>
         <activity
             android:name=".Ruta"
             android:label="@string/title_activity_ruta"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            >
+
         </activity>
         <activity
             android:name=".ListaEdificios"
             android:label="@string/title_activity_lista_edificios"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".VistaEdificio"
             android:label="@string/title_activity_vista_edificio"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".MapaCampus"
             android:label="@string/title_activity_mapa_campus"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".Creditos"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
             android:label="@string/title_activity_creditos" >
         </activity>
     </application>

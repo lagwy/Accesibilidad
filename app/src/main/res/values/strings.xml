@@ -32,10 +32,9 @@
         <item>cetec</item>
         <item>ciap</item>
         <item>rectoria</item>
-
     </string-array>
 
-    <string-array name="edificios">
+    <string-array name="edificiosOrigen">
         <item>Aulas I</item>
         <item>Aulas II</item>
         <item>Aulas III</item>
@@ -48,6 +47,53 @@
         <item>CETEC</item>
         <item>CIAP</item>
         <item>Rectoría</item>
+        <item>Ubiación actual</item>
+    </string-array>
+
+
+    <string-array name="edificiosDestino">
+        <item>Aulas I</item>
+        <item>Aulas II</item>
+        <item>Aulas III</item>
+        <item>Aulas IV</item>
+        <item>Aulas VI</item>
+        <item>Aulas VII</item>
+        <item>Biotecnología</item>
+        <item>Centrales</item>
+        <item>Centro Estudiantil</item>
+        <item>CETEC</item>
+        <item>CIAP</item>
+        <item>Rectoría</item>
+    </string-array>
+
+    <string-array name="descripciones">
+        <item>Descripción de aulas1</item>
+        <item>Descripción de aulas2</item>
+        <item>Descripción de aulas3</item>
+        <item>Descripción de aulas4</item>
+        <item>Descripción de aulas6</item>
+        <item>Descripción de aulas7</item>
+        <item>Descripción de auditorio</item>
+        <item>Descripción de biotecnologia</item>
+        <item>Descripción de cedes</item>
+        <item>Descripción de centrales</item>
+        <item>Descripción de centroestudiantil</item>
+        <item>Descripción de cetec</item>
+        <item>Descripción de ciap</item>
+        <item>Descripción de domo</item>
+        <item>Descripción de e1</item>
+        <item>Descripción de estadio</item>
+        <item>Descripción de gimnasio</item>
+        <item>Descripción de rectoria</item>
+        <item>Descripción de resis1</item>
+        <item>Descripción de resis2</item>
+        <item>Descripción de resis3</item>
+        <item>Descripción de resis4</item>
+        <item>Descripción de resis5</item>
+        <item>Descripción de resis6</item>
+        <item>Descripción de resis7</item>
+        <item>Descripción de resis8</item>
+        <item>Descripción de resis9</item>
     </string-array>
 
     <string-array name="vista_edificios">
