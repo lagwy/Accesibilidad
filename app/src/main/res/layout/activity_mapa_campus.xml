@@ -62,7 +62,7 @@ tools:context="itesm.mx.accesibilidad.MapaCampus"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
     android:layout_centerHorizontal="true"
-    android:text="New Text" />
+    android:text="" />
 
 
 </RelativeLayout>

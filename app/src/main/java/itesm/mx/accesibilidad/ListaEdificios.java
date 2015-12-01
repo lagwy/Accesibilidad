@@ -210,32 +210,6 @@ public class ListaEdificios extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(menu_lista_edificios, menu);
-        return true;
-    }
-    
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        //Item Exit
-        if (id == R.id.exit) {
-            System.exit(0);
-        }
-        //Item Change View
-        else if(id == R.id.change_view) {
-            changeView();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-
-    }
-
     // Clase de carga de imagen desde internet
     private class LoadImage extends AsyncTask<String, String, Renglon> {
         @Override
