@@ -1,6 +1,8 @@
 package itesm.mx.accesibilidad;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -27,8 +29,10 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
     Bitmap bitmap;
     Bitmap[] imagenes;
     ImageView mapaIV;
-    TextView nombreCampusTV;
+    TextView mapaTV;
     int actual = 0;
+    Button infoBtn;
+    final static String tituloBase = "Mapa ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +40,25 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
         setContentView(R.layout.activity_mapa_campus);
         imagenes = new Bitmap[3]; // Arreglo de bitmaps que contiene los 3 dibujos
 
-        nombreCampusTV = (TextView) findViewById(R.id.nombreMapaTV);
+        infoBtn = (Button) findViewById(R.id.infoButton);
+
+        infoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog alertDialog = new AlertDialog.Builder(MapaCampus.this).create();
+                alertDialog.setTitle("Mapa del Campus");
+                alertDialog.setMessage("Desliza hacia la izquierda o derecha para cambiar de mapa.");
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                alertDialog.show();
+            }
+        });
+
+        mapaTV = (TextView) findViewById(R.id.mapa);
         final Button backBttn = (Button) findViewById(R.id.back5);
         mapaIV = (ImageView) findViewById(R.id.mapaCampusIV);
         /*
@@ -106,11 +128,11 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
         }
 
         if (actual == 0){
-            nombreCampusTV.setText("Mapa del campus");
+            mapaTV.setText(tituloBase + "del campus");
         } else if(actual == 1){
-            nombreCampusTV.setText("Rampas");
+            mapaTV.setText(tituloBase +"- Rampas");
         } else if(actual == 2){
-            nombreCampusTV.setText("Baños accesibles");
+            mapaTV.setText(tituloBase + "- Baños");
         }
 
         mapaIV.setImageBitmap(imagenes[actual]);
@@ -155,7 +177,7 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
         protected void onPostExecute(Bitmap image){
             if (image != null){
                 mapaIV.setImageBitmap(image);
-                nombreCampusTV.setText("Mapa del campus");
+                //nombreCampusTV.setText("Mapa del campus");
                 pDialog.dismiss();
             } else {
                 pDialog.dismiss();

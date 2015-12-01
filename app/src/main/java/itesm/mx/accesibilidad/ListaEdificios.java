@@ -25,7 +25,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import static itesm.mx.accesibilidad.R.menu.*;
+//import static itesm.mx.accesibilidad.R.menu.*;
 
 public class ListaEdificios extends AppCompatActivity {
 //dfgvdfg

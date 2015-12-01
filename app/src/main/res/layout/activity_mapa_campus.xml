@@ -44,6 +44,7 @@ tools:context="itesm.mx.accesibilidad.MapaCampus"
         android:text="@string/mapa"
         android:textColor="#ffffff"
         android:textSize="25dp"
+        android:id="@+id/mapa"
         android:textStyle="bold" />
 </android.support.v7.widget.Toolbar>
 
@@ -56,13 +57,13 @@ tools:context="itesm.mx.accesibilidad.MapaCampus"
     android:layout_centerVertical="true"
     android:scaleType="fitXY" />
 
-<TextView
-    android:id="@+id/nombreMapaTV"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    android:layout_centerHorizontal="true"
-    android:text="" />
+    <Button
+        android:id="@+id/infoButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/info"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
