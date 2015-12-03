@@ -1,3 +1,33 @@
+/*
+Accesibilidad - Proyecto de la materia de Desarrollo de Aplicaciones Móviles
+        Copyright (C) 2015 - ITESM
+
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+
+        You should have received a copy of the GNU General Public License
+        along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+        Authors:
+
+        ITESM representatives
+        Ing. Martha Sordia Salinas <msordia@itesm.mx>
+        Ing. Mario de la Fuente <mario.delafuente@itesm.mx>
+
+        ITESM students
+        Luis Angel Martinez Garcia <a00813485@itesm.mx>
+        Daniel Garcia Mena <a00813719@itesm.mx>
+        Jorge Luis Marquez Sanchez <a01139543@itesm.mx>
+*/
+
 package itesm.mx.accesibilidad;
 
 import android.app.Activity;
@@ -72,20 +102,4 @@ public class ListaDiscapacidades extends AppCompatActivity {
     }
 
 
-  /*  @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_nuevo:
-                Log.i("ActionBar", "Nuevo!");
-                return true;
-            case R.id.action_buscar:
-                Log.i("ActionBar", "Buscar!");;
-                return true;
-            case R.id.action_settings:
-                Log.i("ActionBar", "Settings!");;
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }*/
 }
