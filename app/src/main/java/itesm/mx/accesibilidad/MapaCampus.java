@@ -54,6 +54,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public class MapaCampus extends AppCompatActivity implements GestureDetector.OnGestureListener {
+    final static String tituloBase = "Mapa ";
     public GestureDetectorCompat myGestureDetector;
     ProgressDialog pDialog;
     Bitmap bitmap;
@@ -62,7 +63,6 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
     TextView mapaTV;
     int actual = 0;
     Button infoBtn;
-    final static String tituloBase = "Mapa ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

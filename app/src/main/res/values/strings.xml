@@ -115,15 +115,15 @@ Accesibilidad - Proyecto de la materia de Desarrollo de Aplicaciones Móviles
         <item>-Baños\n-Escaleras\n-Rampas</item>
         <item>-Baños\n-Escaleras\n-Rampas</item>
         <item>-Baños\n-Escaleras\n-Rampas</item>
-        <item>-Baños\n-Escaleras\n</item>
-        <item>-Baños\n-Escaleras\n</item>
-        <item>-Baños\n-Elevador\n-Escaleras\n</item>
-        <item>-Baños\n-Escaleras\n</item>
-        <item>-Baños\n-Escaleras\n</item>
-        <item>-Baños\n-Escaleras\n</item>
-        <item>-Baños\n-Escaleras\n</item>
-        <item>-Baños\n-Escaleras\n</item>
-        <item>-Baños\n-Escaleras\n</item>
+        <item>-Baños\n-Escaleras\n-Rampas</item>
+        <item>-Baños\n-Escaleras\n-Rampas</item>
+        <item>-Baños\n-Elevador\n-Escaleras\n-Rampas</item>
+        <item>-Baños\n-Escaleras\n-Rampas</item>
+        <item>-Baños\n-Escaleras\n-Rampas</item>
+        <item>-Baños\n-Escaleras\n-Rampas</item>
+        <item>-Baños\n-Escaleras\n-Rampas</item>
+        <item>-Baños\n-Escaleras\n-Rampas</item>
+        <item>-Baños\n-Escaleras\n-Rampas</item>
     </string-array>
 
     <string-array name="vista_edificios">
@@ -185,8 +185,8 @@ Accesibilidad - Proyecto de la materia de Desarrollo de Aplicaciones Móviles
     <string name="creditos">Version 3.0\n\n\nLic. Jorge Ayala de Campus Accesible\n\n
         Profesora: Martha Sordia\n\n
         Luis Angel Martinez\n
-        Daniel Garcia\n
-        Jorge Marquez\n\n
+        Daniel Garcia Mena\n
+        Jorge Luis Marquez\n\n
         Instituto Tecnológico y de\n Estudios Superiores de Monterrey
     </string>
 </resources>
