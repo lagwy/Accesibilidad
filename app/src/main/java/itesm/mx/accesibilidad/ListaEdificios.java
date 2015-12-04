@@ -42,8 +42,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListaEdificios extends AppCompatActivity {
-//dfgvdfg
-
     int van;
     ProgressDialog pDialog;
     List<Renglon> listaRenglones = new ArrayList<Renglon>();
@@ -90,10 +88,8 @@ public class ListaEdificios extends AppCompatActivity {
         gridview.setVisibility(View.GONE);
         listview.setVisibility(View.VISIBLE);
 
-
         // Lista de los renglones
         getInfoRenglones();
-
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -110,14 +106,9 @@ public class ListaEdificios extends AppCompatActivity {
         lBttn.setOnClickListener(listener);
         gBttn.setOnClickListener(listener);
 
-
-
-
-
         AdapterView.OnItemClickListener itemListener = new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
 
                 Renglon renglon;
                 if(listVisible)
@@ -139,17 +130,11 @@ public class ListaEdificios extends AppCompatActivity {
                     intent.putExtra("urls", vistaEdificios[position]);
                     // Aquí hay que añadir lo de la carga de imagen del edificio
                 }
-
                 startActivity(intent);
-
-                // Toast.makeText(ListaEdificios.this, renglon.getNombre() , Toast.LENGTH_SHORT).show();
             }
         };
         listaEdificiosGV.setOnItemClickListener(itemListener);
         listaEdificiosLV.setOnItemClickListener(itemListener);
-
-
-      
     }
 
     public void getInfoRenglones(){
@@ -159,7 +144,6 @@ public class ListaEdificios extends AppCompatActivity {
         new LoadImage().execute("Aulas 3",              "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas3.jpg");
         new LoadImage().execute("Aulas 4",              "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas4.jpg");
         new LoadImage().execute("Aulas 6", "http://res.cloudinary.com/brogrammers/image/upload/c_scale,q_52,w_502/v1447629345/edificios/aulas6.jpg");
-        //new LoadImage().execute("Aulas 6",              "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas6.jpg");
         new LoadImage().execute("Aulas 7",              "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/aulas7_nuevo.jpg");
         new LoadImage().execute("Auditorio",            "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/auditorio.jpg");
         new LoadImage().execute("Biotecnología",        "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/biotecnologia.jpg");
@@ -182,41 +166,37 @@ public class ListaEdificios extends AppCompatActivity {
         new LoadImage().execute("Residencias 7",        "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis7.jpg");
         new LoadImage().execute("Residencias 8",        "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis8.jpg");
         new LoadImage().execute("Residencias 9",        "http://res.cloudinary.com/brogrammers/image/upload/v1447304278/edificios/resis9.jpg");
-
-
-
+        // Todos las imágenes han sido cargadas
         todos = true;
     }
 
     /**
-     * Method to change the current view
+     * Switch para cambiar la vista actual
      */
     private void changeView() {
-
-        //if the current view is the listview, passes to gridview
+        // Cambia de ListView a GridView
         if(listVisible) {
             listview.setVisibility(View.GONE);
             gridview.setVisibility(View.VISIBLE);
             listVisible = false;
             setAdapters();
         }
-
         else {
             gridview.setVisibility(View.GONE);
             listview.setVisibility(View.VISIBLE);
             listVisible = true;
             setAdapters();
         }
-
     }
 
+    /**
+     * Establecer el adaptador que se vaya a utilizar
+     */
     private void setAdapters() {
-
         if(listVisible) {
             miAdaptador = new ListViewAdapter(this,R.layout.row, listaRenglones);
             listaEdificiosLV.setAdapter(miAdaptador);
         }
-
         else {
             gridAdapter = new GridViewAdapter(this,R.layout.frame, listaRenglones);
             listaEdificiosGV.setAdapter(gridAdapter);
@@ -224,7 +204,9 @@ public class ListaEdificios extends AppCompatActivity {
 
     }
 
-    // Clase de carga de imagen desde internet
+    /**
+     * Clase de carga de imagen desde internet
+     */
     private class LoadImage extends AsyncTask<String, String, Renglon> {
         @Override
         protected void onPreExecute(){
@@ -235,7 +217,6 @@ public class ListaEdificios extends AppCompatActivity {
                 pDialog.show();
                 unaVez = true;
             }
-
         }
 
         protected Renglon doInBackground(String... args){

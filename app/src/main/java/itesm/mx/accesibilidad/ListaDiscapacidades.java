@@ -36,15 +36,11 @@ public class ListaDiscapacidades extends AppCompatActivity {
 
         Button backButton = (Button) findViewById(R.id.back1);
 
-
-
-            // 4 al
         final Button sillaBttn = (Button) findViewById(R.id.sillaBttn);
         final Button muletaBttn = (Button) findViewById(R.id.muletaBttn);
         final Button bastonBttn = (Button) findViewById(R.id.bastonBttn);
         final Button embaraBttn = (Button) findViewById(R.id.embaraBttn);
         final Button backBttn = (Button) findViewById(R.id.back1);
-
 
         View.OnClickListener listener = new View.OnClickListener() {
 

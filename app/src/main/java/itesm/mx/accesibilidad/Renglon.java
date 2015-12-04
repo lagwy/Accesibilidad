@@ -18,6 +18,9 @@ package itesm.mx.accesibilidad;
 
 import android.graphics.Bitmap;
 
+/**
+ * Clase que contiene el nombre y la imagen de cada edificio a ser mostrado en las listas
+ */
 public class Renglon {
     private String nombre;
     private Bitmap imagen;

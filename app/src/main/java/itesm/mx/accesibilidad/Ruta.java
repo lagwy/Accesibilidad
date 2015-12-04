@@ -102,11 +102,6 @@ public class Ruta extends AppCompatActivity {
         }
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000*60*60, 10, locationListener);
 
-
-
-
-
-
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             titulo = tituloRutaTV.getText().toString() + " - " + extras.getString("titulo");
@@ -126,12 +121,9 @@ public class Ruta extends AppCompatActivity {
         Spinner spinnerOri = (Spinner) findViewById(R.id.spinnerOri);
         Spinner spinnerDest = (Spinner) findViewById(R.id.spinnerDest);
 
-
         final String[] nombres = getResources().getStringArray(R.array.nombres);
         final String[] edificiosOri = getResources().getStringArray(R.array.edificiosOrigen);
         final String[] edificiosDest = getResources().getStringArray(R.array.edificiosDestino);
-
-
 
         // Implementacion del spinner de origen
         ArrayAdapter<String> adaptadorOrigen = new ArrayAdapter<String>(this,
@@ -223,7 +215,9 @@ public class Ruta extends AppCompatActivity {
         buttonTraza.setOnClickListener(listener);
     }
 
-
+    /**
+     * Obtener la posicion en la que se encuentra dentro del campus
+     */
     public void localPosition(){
         if(latitud <= 25.652008 && latitud >= 25.651813 && longitud >=  -100.290838 && longitud <= -100.289460){
             posicionOrigen = 0; //Aulas 1
@@ -270,7 +264,9 @@ public class Ruta extends AppCompatActivity {
             posicionOrigen= 13;
     }
 
-    // Clase de carga de imagen desde internet
+    /**
+     * Clase para la carga de imagenes desde el servidor
+     */
     private class LoadImage extends AsyncTask<String, String, Bitmap> {
         @Override
         protected void onPreExecute() {

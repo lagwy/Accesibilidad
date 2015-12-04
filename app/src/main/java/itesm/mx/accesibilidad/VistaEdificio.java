@@ -91,7 +91,9 @@ public class VistaEdificio extends AppCompatActivity {
     }
 
 
-    // Clase de carga de imagen desde internet
+    /**
+     * Clase para la carga de imagenes desde el servidor
+     */
     private class LoadImage extends AsyncTask<String, String, Bitmap> {
         @Override
         protected void onPreExecute(){

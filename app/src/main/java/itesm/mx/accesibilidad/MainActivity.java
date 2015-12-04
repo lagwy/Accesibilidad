@@ -95,8 +95,6 @@ public class MainActivity extends AppCompatActivity {
 
 }
 
-
-
 /*
 Accesibilidad - Proyecto de la materia de Desarrollo de Aplicaciones Móviles
         Copyright (C) 2015 - ITESM

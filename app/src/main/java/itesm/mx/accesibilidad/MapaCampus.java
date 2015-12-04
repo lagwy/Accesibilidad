@@ -77,13 +77,7 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
         mapaTV = (TextView) findViewById(R.id.mapa);
         final Button backBttn = (Button) findViewById(R.id.back5);
         mapaIV = (ImageView) findViewById(R.id.mapaCampusIV);
-        /*
-            Links de las imagenes del campus
-            Juntos: http://res.cloudinary.com/brogrammers/image/upload/v1448563552/campus/juntos.png
-            Rampas: http://res.cloudinary.com/brogrammers/image/upload/v1448563552/campus/rampas.png
-            BaÃ±os: http://res.cloudinary.com/brogrammers/image/upload/v1448563552/campus/banos.png
 
-         */
         new LoadImage().execute("http://res.cloudinary.com/brogrammers/image/upload/v1448563552/campus/juntos_nuevo.png",
                 "http://res.cloudinary.com/brogrammers/image/upload/v1448563552/campus/rampas_nuevo.png",
                 "http://res.cloudinary.com/brogrammers/image/upload/v1448563552/campus/banos_nuevo.png");
@@ -100,7 +94,6 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
         // Gestos de flings
         myGestureDetector = new GestureDetectorCompat(getApplicationContext(), this);
     }
-
 
     @Override
     public boolean onDown(MotionEvent motionEvent) {
@@ -127,6 +120,14 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
 
     }
 
+    /**
+     * Metodo que evalua el gesto de hacer fling sobre la imagen del campus
+     * @param e1 Comienzo del evento de fling
+     * @param e2 Final del evento de fling
+     * @param velocityX Velocidad en x
+     * @param velocityY Velocidad en y
+     * @return true
+     */
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
         if(e1.getX() < e2.getX()){
@@ -162,9 +163,14 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
         return  super.onTouchEvent(e);
     }
 
-    // Clase de carga de imagen desde internet
+    /**
+     * Clase para la carga de imagenes desde el servidor
+     */
     private class LoadImage extends AsyncTask<String, String, Bitmap> {
         @Override
+        /**
+         * Establecer un dialogo para avisar al usuario que se estan cargando las imagenes
+         */
         protected void onPreExecute(){
             super.onPreExecute();
             pDialog = new ProgressDialog(MapaCampus.this);
@@ -172,6 +178,11 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
             pDialog.show();
         }
 
+        /**
+         * Obtener las imagenes desde el servidor
+         * @param args Strings que contienen las direcciones de las imagenes en la red
+         * @return Bitmap con la imagen default
+         */
         protected Bitmap doInBackground(String... args){
             try{
                 // Obtener bitmap de todos los elementos
@@ -190,6 +201,10 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
             return imagenes[0];
         }
 
+        /**
+         * Establece la imagen default en el ImageView
+         * @param image La imagen default cargada desde el servidor
+         */
         protected void onPostExecute(Bitmap image){
             if (image != null){
                 mapaIV.setImageBitmap(image);
