@@ -42,6 +42,8 @@ import android.graphics.BitmapFactory;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.IBinder;
@@ -84,6 +86,17 @@ public class Ruta extends AppCompatActivity {
         setContentView(R.layout.activity_ruta);
         TextView tituloRutaTV = (TextView) findViewById(R.id.titulo_rutaTV);
 
+        // Revisar la conexión a internet
+        ConnectivityManager networkManager = (ConnectivityManager) this.getSystemService(
+                Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = networkManager.getActiveNetworkInfo();
+        NetworkInfo wifi = networkManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        if (wifi.isAvailable() && wifi.isConnected()) {
+        }else {
+            // Desplegar un mensaje de que no hay conexión a internet o no es por wifi
+            Toast toast = Toast.makeText(getApplicationContext(), "No estas utilizando una conexión WiFi", Toast.LENGTH_SHORT);
+            toast.show();
+        }
 
         final LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
 

@@ -31,12 +31,16 @@ Accesibilidad - Proyecto de la materia de Desarrollo de Aplicaciones Móviles
 package itesm.mx.accesibilidad;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -65,6 +69,19 @@ public class GridViewAdapter extends ArrayAdapter<Renglon> {
 
         TextView renglonTV = (TextView) row.findViewById(R.id.textViewR);
         ImageView renglonIV = (ImageView) row.findViewById(R.id.imageR);
+
+        ConnectivityManager networkManager = (ConnectivityManager) context.getSystemService(
+                Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = networkManager.getActiveNetworkInfo();
+        NetworkInfo wifi = networkManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        if (wifi.isAvailable() && wifi.isConnected()) {
+            // Aquí hay internet así que se carga normal
+        }else {
+            // Aquí se cambia el color a negro porque si no no se distingue el mapa
+            renglonTV.setTextColor(Color.parseColor("#000000"));
+        }
+
+
 
         Renglon renglon = renglones.get(position);
         renglonTV.setText(renglon.getNombre());

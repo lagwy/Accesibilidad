@@ -45,6 +45,10 @@ public class Renglon {
 
     }
 
+    public Renglon(String nombre) {
+        this.nombre = nombre;
+    }
+
     public Renglon(String nombre, Bitmap imagen){
         this.nombre = nombre;
         this.imagen = imagen;

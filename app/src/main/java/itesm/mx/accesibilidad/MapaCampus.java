@@ -32,9 +32,12 @@ package itesm.mx.accesibilidad;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -69,6 +72,19 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapa_campus);
         imagenes = new Bitmap[3]; // Arreglo de bitmaps que contiene los 3 dibujos
+
+        // Revisar la conexión a internet
+        ConnectivityManager networkManager = (ConnectivityManager) this.getSystemService(
+                Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = networkManager.getActiveNetworkInfo();
+        NetworkInfo wifi = networkManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        if (wifi.isAvailable() && wifi.isConnected()) {
+        }else {
+            // Desplegar un mensaje de que no hay conexión a internet o no es por wifi
+            Toast toast = Toast.makeText(getApplicationContext(), "No estas utilizando una conexión WiFi", Toast.LENGTH_SHORT);
+            toast.show();
+        }
+
 
         infoBtn = (Button) findViewById(R.id.infoButton);
 
@@ -210,6 +226,10 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
                 imagenes[2] = bitmap;
             } catch (Exception e){
                 e.printStackTrace();
+                // Que aparezca solo una imagen incluso con el fling cuando no se pueden obtener las imagenes de red
+                imagenes[0] = BitmapFactory.decodeResource(getApplicationContext().getResources(),
+                        R.drawable.ma);
+                imagenes[1] = imagenes[2] = imagenes[0];
             }
             // Manda la imagen del primer bitmap al onPostExecute()
             return imagenes[0];

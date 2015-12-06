@@ -67,11 +67,9 @@ public class MainActivity extends AppCompatActivity {
             // La aplicación hacer lo demás
         }else {
             // Desplegar un mensaje de que no hay conexión a internet o no es por wifi
-            Toast toast = Toast.makeText(getApplicationContext(), "No estas utilizando una conexión WiFi\n" +
-                    "conectate a una y vuelve a intentar.", Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(getApplicationContext(), "No estas utilizando una conexión WiFi " +
+                    "conectate a una para poder aprovechar esta aplicación de la mejor manera.", Toast.LENGTH_SHORT);
             toast.show();
-            // Terminar la aplicacion
-            finish();
         }
 
         final Button rutaBttn = (Button) findViewById(R.id.rutaBttn);

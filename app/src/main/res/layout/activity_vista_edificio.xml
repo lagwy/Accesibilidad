@@ -84,7 +84,7 @@ Accesibilidad - Proyecto de la materia de Desarrollo de Aplicaciones Móviles
         android:layout_height="200dp"
         android:layout_marginTop="60dp"
         android:scaleType="fitXY"
-        />
+        android:src="@drawable/edificio" />
 
 
     <LinearLayout
@@ -126,7 +126,7 @@ Accesibilidad - Proyecto de la materia de Desarrollo de Aplicaciones Móviles
         android:layout_marginRight="20dp"
         android:layout_marginTop="36dp"
         android:scaleType="fitXY"
-        />
+        android:src="@drawable/ma" />
 
 
 

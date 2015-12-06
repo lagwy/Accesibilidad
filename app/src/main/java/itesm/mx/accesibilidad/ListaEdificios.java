@@ -31,9 +31,12 @@ Accesibilidad - Proyecto de la materia de Desarrollo de Aplicaciones Móviles
 package itesm.mx.accesibilidad;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -47,6 +50,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
@@ -103,6 +107,19 @@ public class ListaEdificios extends AppCompatActivity {
         listview.setVisibility(View.VISIBLE);
 
         // Lista de los renglones
+        ConnectivityManager networkManager = (ConnectivityManager) this.getSystemService(
+                Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = networkManager.getActiveNetworkInfo();
+        NetworkInfo wifi = networkManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        if (wifi.isAvailable() && wifi.isConnected()) {
+            // Obtener la informacion de los renglones
+            getInfoRenglones();
+        }else {
+            // Desplegar un mensaje de que no hay conexión a internet o no es por wifi
+            Toast toast = Toast.makeText(getApplicationContext(), "No estas utilizando una conexión WiFi", Toast.LENGTH_SHORT);
+            toast.show();
+
+        }
         getInfoRenglones();
 
         View.OnClickListener listener = new View.OnClickListener() {
@@ -142,7 +159,6 @@ public class ListaEdificios extends AppCompatActivity {
                     intent.putExtra("imagenEdificio", byteArray);
                     intent.putExtra("posicion", position);
                     intent.putExtra("urls", vistaEdificios[position]);
-                    // Aquí hay que añadir lo de la carga de imagen del edificio
                 }
                 startActivity(intent);
             }
@@ -235,13 +251,18 @@ public class ListaEdificios extends AppCompatActivity {
 
         protected Renglon doInBackground(String... args){
             Bitmap bmp = null;
-
+            Renglon renglon = null;
             try{
                 bmp = BitmapFactory.decodeStream((InputStream) new URL(args[1]).getContent());
             } catch (Exception e){
                 e.printStackTrace();
             }
-            Renglon renglon = new Renglon(args[0], bmp);
+            if(bmp != null){
+                renglon = new Renglon(args[0], bmp);
+            } else {
+                renglon = new Renglon(args[0], BitmapFactory.decodeResource(getApplicationContext().getResources(),
+                        R.drawable.edificio));
+            }
             return renglon;
         }
 

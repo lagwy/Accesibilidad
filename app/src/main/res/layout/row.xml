@@ -37,7 +37,7 @@ Accesibilidad - Proyecto de la materia de Desarrollo de Aplicaciones Móviles
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:scaleType="fitXY"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/edificio"
         />
 
     <TextView
