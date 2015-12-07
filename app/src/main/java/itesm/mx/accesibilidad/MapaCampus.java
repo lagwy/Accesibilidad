@@ -95,7 +95,7 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
             public void onClick(View view) {
                 AlertDialog alertDialog = new AlertDialog.Builder(MapaCampus.this).create();
                 alertDialog.setTitle("Mapa del Campus");
-                alertDialog.setMessage("Desliza hacia la izquierda o derecha para cambiar de mapa.");
+                alertDialog.setMessage("Si tienes conexión a internet, desliza hacia la izquierda o derecha para cambiar de mapa.");
                 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
