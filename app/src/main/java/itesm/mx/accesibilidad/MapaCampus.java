@@ -66,6 +66,7 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
     TextView mapaTV;
     int actual = 0;
     Button infoBtn;
+    boolean hayInternet = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +80,7 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
         NetworkInfo networkInfo = networkManager.getActiveNetworkInfo();
         NetworkInfo wifi = networkManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
         if (wifi.isAvailable() && wifi.isConnected()) {
+            hayInternet = true;
         }else {
             // Desplegar un mensaje de que no hay conexión a internet o no es por wifi
             Toast toast = Toast.makeText(getApplicationContext(), "No estas utilizando una conexión WiFi", Toast.LENGTH_SHORT);
@@ -160,28 +162,31 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
      */
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-        if(e1.getX() < e2.getX()){
-            // Esto es a la derecha
-            actual--;
-            if(actual<0){
-                actual = 2;
-            }
-        } else if (e1.getX() > e2.getX()){
-            // Esto es a la izquierda
-            actual++;
-            if(actual > 2){
-                actual = 0;
-            }
-        }
+        if(hayInternet){
 
-        if (actual == 0){
-            mapaTV.setText(tituloBase + "del campus");
-        } else if(actual == 1){
-            mapaTV.setText(tituloBase +"- Rampas");
-        } else if(actual == 2){
-            mapaTV.setText(tituloBase + "- Baños");
-        }
+            if(e1.getX() < e2.getX()){
+                // Esto es a la derecha
+                actual--;
+                if(actual<0){
+                    actual = 2;
+                }
+            } else if (e1.getX() > e2.getX()){
+                // Esto es a la izquierda
+                actual++;
+                if(actual > 2){
+                    actual = 0;
+                }
+            }
 
+            if (actual == 0){
+                mapaTV.setText(tituloBase + "del campus");
+            } else if(actual == 1){
+                mapaTV.setText(tituloBase +"- Rampas");
+            } else if(actual == 2){
+                mapaTV.setText(tituloBase + "- Baños");
+            }
+
+        }
         mapaIV.setImageBitmap(imagenes[actual]);
         return true;
     }
