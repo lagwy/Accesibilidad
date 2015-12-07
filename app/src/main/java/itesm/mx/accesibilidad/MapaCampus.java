@@ -108,9 +108,9 @@ public class MapaCampus extends AppCompatActivity implements GestureDetector.OnG
         final Button backBttn = (Button) findViewById(R.id.back5);
         mapaIV = (ImageView) findViewById(R.id.mapaCampusIV);
 
-        new LoadImage().execute("http://res.cloudinary.com/brogrammers/image/upload/v1448563552/campus/juntos_nuevo.png",
-                "http://res.cloudinary.com/brogrammers/image/upload/v1448563552/campus/rampas_nuevo.png",
-                "http://res.cloudinary.com/brogrammers/image/upload/v1448563552/campus/banos_nuevo.png");
+        new LoadImage().execute("http://res.cloudinary.com/brogrammers/image/upload/v1448563552/campus/juntos_nuevos.png",
+                "http://res.cloudinary.com/brogrammers/image/upload/v1448563552/campus/rampas_nuevos.png",
+                "http://res.cloudinary.com/brogrammers/image/upload/v1448563552/campus/banos_nuevos.png");
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
