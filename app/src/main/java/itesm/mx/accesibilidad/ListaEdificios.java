@@ -113,7 +113,7 @@ public class ListaEdificios extends AppCompatActivity {
         NetworkInfo wifi = networkManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
         if (wifi.isAvailable() && wifi.isConnected()) {
             // Obtener la informacion de los renglones
-            getInfoRenglones();
+            //getInfoRenglones();
         }else {
             // Desplegar un mensaje de que no hay conexión a internet o no es por wifi
             Toast toast = Toast.makeText(getApplicationContext(), "No estas utilizando una conexión WiFi", Toast.LENGTH_SHORT);
